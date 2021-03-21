@@ -84,7 +84,7 @@ app.post('/find_pdfs',function(req,res)
     var key=req.body.search_key;
     console.log(key);
     var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" || "mongodb://localhost:27017/";
 
 MongoClient.connect(url,  function(err, db) {
   if (err) throw err;

@@ -4,7 +4,7 @@
   "description": "this is educational website created by kshitij patel",
   "main": "index.js",
   "engines": {
-    "npm": "6.x"
+    "npm": "6.14.6"
   },
   "scripts": {
     "serve": "nodemon run serve",

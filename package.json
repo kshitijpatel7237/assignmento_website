@@ -4,7 +4,8 @@
   "description": "this is educational website created by kshitij patel",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon server.js"
+    "serve": "nodemon server.js",
+    "start":"node index.js"
   },
   "author": "kshitij patel",
   "license": "ISC",

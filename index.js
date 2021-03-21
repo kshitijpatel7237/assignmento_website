@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 // setting body-parser and multer
 app.use(bodyparser.urlencoded({extended:true})); 
 app.use(bodyparser.json()) ;
-var upload = multer({dest : '../uploads/pdfs'})  
+var upload = multer({dest : '../uploads'})  
 
 
 // setting middlewares
@@ -54,7 +54,7 @@ var storage = multer.diskStorage({
     destination: function (req, file, cb) { 
   
         // Uploads is the Upload_folder_name 
-        cb(null, path.join(__dirname, '/uploads/pdfs')) 
+        cb(null, path.join(__dirname, '/uploads')) 
     }, 
     filename: function (req, file, cb) { 
       cb(null, file.fieldname + "-" + Date.now()+".pdf") 
@@ -84,11 +84,11 @@ app.post('/find_pdfs',function(req,res)
     var key=req.body.search_key;
     console.log(key);
     var MongoClient = require('mongodb').MongoClient;
-var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" || "mongodb://localhost:27017/";
+var url ="mongodb://localhost:27017/" || "mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 MongoClient.connect(url,  function(err, db) {
   if (err) throw err;
-  var dbo = db.db("myFirstDatabase");
+  var dbo = db.db("assignmento");
    var query = {link_of_playlist:key};
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;

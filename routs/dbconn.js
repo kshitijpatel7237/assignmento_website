@@ -18,7 +18,7 @@
 
 var mongoose=require('mongoose');
 var assert=require('assert');
-var url = "mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" || "mongodb://localhost:27017/assignmento";
+var url = "mongodb://localhost:27017/assignmento" || "mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ;
 
 // connection code
 module.exports=mongoose.connect(

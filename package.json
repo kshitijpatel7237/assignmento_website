@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "this is educational website created by kshitij patel",
   "main": "index.js",
+  "engines": {
+    "npm": "6.x"
+  },
   "scripts": {
     "serve": "nodemon run serve",
     "start": "node index.js"
@@ -25,8 +28,6 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
-  },
-  "engines": {
-    "npm": "6.x"
   }
+
 }

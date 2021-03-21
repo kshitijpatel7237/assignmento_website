@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 // setting body-parser and multer
 app.use(bodyparser.urlencoded({extended:true})); 
 app.use(bodyparser.json()) ;
-var upload = multer({dest : '../uploads'})  
+var upload = multer({dest : '../tmp/uploads'})  
 
 
 // setting middlewares
@@ -54,7 +54,7 @@ var storage = multer.diskStorage({
     destination: function (req, file, cb) { 
   
         // Uploads is the Upload_folder_name 
-        cb(null, path.join(__dirname, '/uploads')) 
+        cb(null, path.join(__dirname, '/tmp/uploads')) 
     }, 
     filename: function (req, file, cb) { 
       cb(null, file.fieldname + "-" + Date.now()+".pdf") 

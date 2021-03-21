@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 // setting body-parser and multer
 app.use(bodyparser.urlencoded({extended:true})); 
 app.use(bodyparser.json()) ;
-var upload = multer({dest : '../uploas/pdfs'})  
+var upload = multer({dest : '../uploads/pdfs'})  
 
 
 // setting middlewares

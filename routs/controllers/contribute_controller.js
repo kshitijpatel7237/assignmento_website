@@ -60,6 +60,7 @@ var multer=require('multer');
 var fs=require('fs');
 var {check,validationResult}=require('express-validator')
 var contribute_model=require('../models/contribute');
+//pdf:req.file.originalname,
 module.exports=function(req,res)
 {
 	console.log(req.file);
@@ -75,7 +76,7 @@ topic:req.body.topic,
 number_of_ques:req.body.no_of_ques,
 channel_name:req.body.channel,
 link_of_playlist:req.body.link_of_playlist,
-pdf:req.file.originalname,
+
 drive_link:req.body.drive_link
 },
 function(err,result)

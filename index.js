@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 // setting body-parser and multer
 app.use(bodyparser.urlencoded({extended:true})); 
 app.use(bodyparser.json()) ;
-var upload = multer({dest : '../tmp/uploads'})  
+var upload = multer({dest : '/tmp/uploads'})  
 
 
 // setting middlewares

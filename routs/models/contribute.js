@@ -22,48 +22,48 @@ var contribute_schema=mongoose.Schema(
 		
 	},
 	mobile:{
-		type:String,
+		type:String
 		
 	},
 	address:{
-		type:String,
+		type:String
 		
 	},
 	subject:{
-		type:String,
+		type:String
 		
 	},
 	chapter:{
-		type:String,
+		type:String
 		
 	},
 	topic:{
-		type:String,
+		type:String
 		
 	},
 	number_of_ques:{
 		type:Number,
-		
+	
 	},
 	channel_name:{
-		type:String,
+		type:String
 		
 	},
 	link_of_playlist:{
-		type:String,
+		type:String
 		
 	},
-	pdf:{
-		type:String,
-		required:true
-	},
+	
 	drive_link:{
 		type:String
 	}
 
 	});
 
-//model
+//model pdf:{
+		//type:String,
+		required:true
+	//},
 mongoose.model('contribute',contribute_schema);
 
 module.exports=mongoose.model('contribute');

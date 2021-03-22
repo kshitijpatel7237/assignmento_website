@@ -12,9 +12,16 @@
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome to assignmento</title>
 
 
@@ -91,7 +98,7 @@
 }
 .copyright-text
 {
-  margin:0
+  margin:0;
 }
 @media (max-width:991px)
 {
@@ -175,6 +182,7 @@
 }
 @media (max-width:767px)
 {
+  
   .social-icons li.title
   {
     display:block;
@@ -183,26 +191,85 @@
   }
 }
 
-*{
-  font-size:24px !important;
+.fixed{
+  font-size: 19px;
+
 }
-body{
+
+
+  *{
+  padding:0px;
+  margin:0px;
+  /*box-sizing:border-box;*/
   
   
 }
 
- </style>
+nav .navbar-header a{
+  font-family:'Raleway',sans-serif;
+  letter-spacing:1px;
+  font-size: 19px;
+}
+nav .navbar-header a,ul li a{
+  color:#fff;
+  
+}
+nav .navbar-header button .fa{
+  color:#fff;
+  border:1px solid #fff;
+  border-radius:5px;
+  padding:4px 10px;
+  font-size:16px;
+  position:absolute;
+  top:-0.5px;
+  left:-30px;
+}
+
+.glyphicon-search{
+  color:#2874f0;
+}
+
+
+form{
+  position:relative;
+  top:10px;
+}
+
+.menu{
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+ .fst{
+  width:50%;
+ }
+ .snd{
+  width:50%;
+ }
+ @media  (max-width:600px)
+ {
+  .fst{
+    width: 100%;
+  }
+  .snd
+  {
+    width: 100%;
+  }
+ }
+
+
+
+</style>
 </head>
 <body class="container-fluid">
   
  
 
-<div class="container-fluid" >
+<div  >
 
 
 <header style="height:auto">
     
-<nav class="navbar navbar-inverse" style="background-color:indigo;">
+<!-- <nav class="navbar navbar-inverse" style="background-color:indigo;">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -228,12 +295,38 @@ body{
   </div>
 </nav>
 
-
+ -->
+ <nav class="navbar navbar-dark navbar-fixed-top fixed" style="background-color:indigo;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <i class="fa fa-bars" style="color: white"></i>
+                    </button>
+                    <a class="navbar-brand" href="#" style="color:white;">Assignmento</a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <!-- <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+      </form> -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- <li><a href="" style="color:white;"><span class="glyphicon glyphicon-shopping-cart"></span> assignments<span class="badge"></span></a></li> -->
+                        <li><a href="" style="color:white;"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                      <li><a href="" style="color:white;"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  
   </header>
 
 
 
 
+<br><br>
 
 
 
@@ -241,14 +334,17 @@ body{
 
 
 
+  <div  style="display:flex;flex-direction:row;;flex-wrap:wrap;justify-content:space-between;margin-top:34px;">
 
-  <div style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;margin-top:34px">
-    <div class="col-lg-6 col-sm-12 col-md-12" style="border:2px solid black;height:auto">
-    <h2 style="color:#bb0a0a">Explore:</h2>
-    <h3 class="text-center" style="text-decoration: underline;font-size:24px">Here is Your Today's Task</h3>
-   <div style="width:90%;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;">
-    <div style="width:50%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align: center;font-size:30px;padding:20px;">English   <span class="badge badge-danger">due:11:59pm</span></div>
-     <div style="display: flex;flex-direction: column;justify-content: space-around;">
+    <!-- fst box start -->
+    <div class="fixed container-fluid fst "style="border:none;">
+        <h2 style="color:#bb0a0a">Explore:</h2>
+        <h3 class="text-center" style="text-decoration: underline;">Here is Your Today's Task</h3>
+        <div style="width:90%;display: flex;flex-direction: row;flex-wrap:wrap;justify-content: space-between;">
+    <div style="width:50%;box-shadow: rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align: center;padding:20px;">English   <span class="badge badge-danger">due:11:59pm</span></div>
+
+
+     <div style="display: flex;flex-direction: column;justify-content: space-around;flex-wrap: wrap">
       <div> <input type="button" class="btn btn-link" value="Open Task">  </div>
       <div><input type="submit" class="btn btn-success" value="Submit Task"></div>
   
@@ -256,29 +352,38 @@ body{
    </div>
     
     <br><br>
-    <div style="font-size:25px">
+    <div class="fixed">
       <b>Topic:</b>Direct & Indirect Speech <br>
       <b>Uploaded By:</b>Kshitij Patel <br>
       <b>Prefession:</b>Teacher
 
     </div>
     </div>
-    <div class="col-lg-6 col-sm-12 col-md-12" style="border:2px solid black;height:auto">
+
+    <!-- first box ends -->
+
+
+    <!-- snd box starts -->
+    <div class="fixed container snd" style="border:0.2px solid black;">
       <h2 style="color:#bb0a0a">Updates:</h2>
       <h3>1. This Month Is Devoted To English  <span class="badge badge-danger">new</span></h3>
     </div>
+    <!-- snd box ends -->
   </div>
   <br><br>
   <div class="container-fluid" style="border:1px solid black;height:auto;">
-     <h2 style="color:#bb0a0a;text-decoration: underline;">Find Your Assignment </h2>
+     <h3 style="color:#bb0a0a;text-decoration: underline;">Find Your Assignment </h3>
 
 
 
 
 <!-- The form -->
 <form class="example text-center" action="/find_pdfs" method="POST">
-  <input type="text" placeholder="Paste Link of playlist" name="search_key">
-  <button type="submit"><i class="fa fa-search"></i></button>
+  <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;">
+     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px">
+  <button type="submit" style="font-size:19px"><i class="fa fa-search"></i></button>
+  </div>
+ 
 </form>
 
 <br>
@@ -296,7 +401,7 @@ body{
     </thead> -->
 
   
-    <tbody>
+    <tbody class="fixed">
 
 
       
@@ -374,7 +479,7 @@ body{
         </div>
       </div>
 </footer>
-  </footer>
+  
  
 </div>
 <div>
@@ -386,7 +491,7 @@ body{
 <script>
  // require('./contribute');
 </script>
-<script >
+<!-- <script >
   var $select1 = $( '#select1' ),
     $select2 = $( '#select2' ),
     $options = $select2.find( 'option' );
@@ -394,6 +499,6 @@ body{
 $select1.on( 'change', function() {
   $select2.html( $options.filter( '[value="' + this.value + '"]' ) );
 } ).trigger( 'change' );
-</script>
+</script> -->
 </body>
 </html>

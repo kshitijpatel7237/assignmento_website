@@ -75,7 +75,7 @@ var fun=require(path.join(__dirname, '/routs/controllers/contribute_controller')
  fun(req,res);
  
 console.log(req.body);
-res.send(req.body );
+res.send("assignment uploaded sucseesfully");
 
 
 });

@@ -8,17 +8,17 @@ var router=require('router');
 var contribute_schema=mongoose.Schema(
 	{
     name:{
-		type:String,
-		required:true
+		type:String
+		
 	},
     degree:{
-		type:String,
-		required:true
+		type:String
+		
 	},
 	email:{
-		type:String,
-		required:true,
-		unique:false
+		type:String
+		
+		
 		
 	},
 	mobile:{
@@ -62,7 +62,7 @@ var contribute_schema=mongoose.Schema(
 
 //model pdf:{
 		//type:String,
-		required:true
+		//required:true
 	//},
 mongoose.model('contribute',contribute_schema);
 

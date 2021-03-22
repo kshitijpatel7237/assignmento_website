@@ -90,7 +90,7 @@ function(err,result)
 	}
 	else
 	{
-		console.log("insertion successfull");
+		console.send("insertion successfull");
  return;
 	}
 }

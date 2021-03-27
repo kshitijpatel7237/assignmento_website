@@ -4,18 +4,17 @@
   "description": "this is educational website created by kshitij patel",
   "main": "index.js",
   "engines": {
-  "node": "^7.10.1",
-  "yarn": "0.27.5"
-},
+    "node": "^7.10.1",
+    "yarn": "0.27.5"
+  },
   "scripts": {
     "serve": "nodemon run serve",
     "start": "node index.js"
-
-
   },
   "author": "kshitij patel",
   "license": "ISC",
   "dependencies": {
+    "alert": "^5.0.10",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.6",
@@ -31,5 +30,4 @@
   "devDependencies": {
     "cross-env": "^7.0.3"
   }
-
 }

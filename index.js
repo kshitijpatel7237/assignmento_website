@@ -7,7 +7,7 @@ var multer = require("multer")
 var mongoose=require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.Promise = require('q').Promise;
-var alert=require('alert');
+var popup = require('popups');
 //var router=require('router')
 var dbconn=require('./routs/dbconn');
 
@@ -85,7 +85,9 @@ var fun=require(path.join(__dirname, '/routs/controllers/contribute_controller')
  fun(req,res);
  
 console.log(req.body);
-alert("assignment uploaded sucseesfully");
+popup.alert({
+    content: "assignment uploaded sucseesfully"
+});
 res.render('contribute');
 
 
@@ -122,7 +124,9 @@ var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
  fun(req,res);
  
 //console.log(req.body);
-alert("sign_up_sucessfully");
+popup.alert({
+    content: 'Sign Up sucessfull'
+});
 res.render('index',{status:1,name:req.body.name});
 
 });
@@ -155,7 +159,9 @@ res.render('index',{status:1,name:result[0].name});
 }
 else
 {
-  alert('user not found');
+ popup.alert({
+    content: 'user not found'
+});
   res.render('index',{status:0,name:""});
 }
     

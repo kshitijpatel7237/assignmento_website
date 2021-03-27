@@ -212,7 +212,23 @@
 
   <!-- FORM SECTION START -->
   <h2 class="text-center">Upload New Assignment</h2>
-  <br><br>
+  <br>
+
+
+ <!-- code for alert starts -->
+<% if(message!="") {
+  %>
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+     <strong></strong><%= message %>
+  </div>
+
+<%}%>
+
+<!-- code for elert ends -->
+
+
+  <br>
 <form class="form-horizontal"  method="POST" action="submit_assignment" enctype="multipart/form-data">
   <div class="col-sm-6">
     <div class="form-group">

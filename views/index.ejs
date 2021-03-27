@@ -98,7 +98,7 @@
       <!-- code for alert starts -->
 <% if(message!="") {
   %>
-  <div class="alert alert-success alert-dismissible">
+  <div class="alert alert-success alert-dismissible" style="width: 30vw">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
      <strong></strong><%= message %>
   </div>
@@ -170,14 +170,14 @@
 <!-- The form -->
 <form class="example text-center" action="/find_pdfs" method="POST">
   <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;">
-     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px">
+     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px;border-radius:4px;">
   <button type="submit" style="font-size:19px"><i class="fa fa-search"></i></button>
   </div>
  
 </form>
 
 <br>
-<div class="container" id="my_table">
+<div class="container" id="my_table" >
             
   <table class="table">
    
@@ -189,16 +189,16 @@
       
       <tr>
         
-        <td> 1. Just go to yutube and copy the link of video</td>
+        <td style="text-align: left;"> 1. Just go to yutube and copy the link of video</td>
        
       </tr>
       <tr>
-        <td>
+        <td style="text-align: left;">
           2. paste the link in above search box 
         </td>
       </tr>
       <tr>
-        <td>
+        <td style="text-align: left;">
           3. click on seach icon
         </td>
       </tr>

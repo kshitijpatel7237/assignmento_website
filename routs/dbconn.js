@@ -32,7 +32,7 @@ module.exports=mongoose.connect(
 	{
 		assert.equal(err,null,"conncetion failed");
 		console.log("connection success");
-		console.log(link);
+		//console.log(link);
 
 	}
 	);

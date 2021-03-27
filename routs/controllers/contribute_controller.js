@@ -63,7 +63,7 @@ var contribute_model=require('../models/contribute');
 //pdf:req.file.originalname,
 module.exports=function(req,res)
 {
-	console.log(req.file);
+	//console.log(req.file);
 contribute_model.create({
 name:req.body.name,
 degree:req.body.degree,

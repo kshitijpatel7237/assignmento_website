@@ -2,2079 +2,846 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Renaissance</title>
+  <title>Welcome to E-Assignmento</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-  <link rel="icon" href="assets/img/icon.png" type="image/gif" sizes="16x16">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <!-- Icon -->
-  <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
-  <!-- Slicknav -->
-  <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
-  <!-- Nivo Lightbox -->
-  <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css">
-  <!-- Animate -->
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-  <!-- Main Style -->
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-  <!-- Responsive Style -->
-  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-  <meta property="og:title" content="Renaissance 6.0">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <meta name="author" content="Team Renaissance MNNIT Allahabad">
-  <meta name="description" http-equiv="description"
-    content="Renaissance 6.0 | March 28-29, 2020 | Renaissance - An Entrepreneurship Summit is an event by E-Cell MNNIT for aspiring and full time entrepreneurs taking ideation to implementation." />
-  <meta name="keywords"
-    content="Renaissance,renaissance nit allahabad, MNNIT,motilal, Allahabad, ecell Entrepreneurship Summit,Online 
-	,Entrepreneurship,Cell,Guest 
-	,Workshops,India's Largest Entrepreneurial Summit,Summit,Conference,Startup, Entrepreneur, Panel Discussions,esummit, funding, network, investors, startup, product, blog, silicon valley, engineering,Leadership, 
-	, Asia, India, Largest Summit, Leader, Speaker, Video, Resources, esummit, nit allahabad, esummit nit allahabad, esummit17, esummit 2017 registration" />
-  <meta property="og:image"
-    content="https://3.bp.blogspot.com/-2w4ASZKQjS4/WI3_Kqeyr3I/AAAAAAAAF2w/TDuZM56T1SEfWdpSXEp22ykiIVJtFejogCLcB/s1600/email_new.png" />
-  <meta property="og:description"
-    content="Renaissance 6.0 | March 28-29, 2020 | Renaissance - An annual entrepreneurhip summit under the Design Innovation and Incubation Center(DIIC) envisages to support innovative ideas of an individual or group." />
-  <style>
-    @media (min-width: 992px) {
-      #bg {
-        background-image: url(assets/img/counter_new-01.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-      }
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
-    @media only screen and (max-width: 800px) {
-      #t1 {
-        display: none;
-      }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-      #t2 {
-        display: none;
-      }
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-      #loc {
-        padding-top: 10%;
-      }
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      #journeypad {
-        padding-top: 10%;
-      }
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
-    }
-
-    @media only screen and (max-width: 770px) {
-      #t1 {
-        display: none;
-      }
-
-      #t2 {
-        display: none;
-      }
-
-      #loc {
-        padding-top: 10%;
-      }
-
-      #journeypad {
-        padding-top: 10%;
-      }
-    }
-
-    .register {
-      position: fixed;
-      left: 3%;
-      bottom: 12%;
-      width: 11%;
-      height: 6%;
-      /* background-color: red; */
-      color: white;
-      text-align: center;
-      z-index: 9;
-    }
-
-    .img-wrapper {
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    .img-wrapper img {
-      display: block;
-      transition: all .25s ease;
-    }
-
-    .img-wrapper img:hover {
-      transform: scale(1.5);
-      opacity: 0;
-      z-index: -1;
-    }
-
-    .img-wrapper:hover .overlay {
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 5%;
-      right: 0;
-      height: 97%;
-      width: 97%;
-      background-color: #eee;
-      overflow: hidden;
-      transition: 0.1s all ease;
-      transition-delay: 0.2s;
-      transform: scale(0);
-      align-items: center;
-      text-align: center;
-      opacity: 0;
-    }
-
-    .overlay:hover .img-wrapper img {
-      opacity: 0;
-      transform: scale(1);
-    }
-
-    .event-para {
-      display: block;
-      color: black;
-      position: absolute;
-      height: auto;
-      width: auto;
-      font-size: 1.2rem;
-      margin-top: 0.8em;
-      text-align: center;
-    }
-
-    #sponsor-btn:hover {
-      color: black;
-      transform: scale(1.5);
-    }
-
-    #sponsor-btn {
-      background-color: #2C899A;
-    }
-
-    .h1_color_new{
-      color: #106f80 !important;
-    }
-    .p_color{
-      color:white!important;  
-      /*used in changing color of about us paragraph*/
-    }
-
-    #loading {
-      background: url('assets/img/renloader.gif') no-repeat center center;
-      position: fixed;
-      background-size:40%;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 9999999999;
-    }
-
-    #cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;}
-  </style>
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- =======================================================
+  * Template Name: E-Assignmento - v2.2.1
+  * Template URL: https://bootstrapmade.com/E-Assignmento-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-  <div id="cover"></div>
-  <div id="loading"></div>
-  <!-- Header Area wrapper Starts -->
-  <header id="header-wrap">
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
-            aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="icon-menu"></span>
-            <span class="icon-menu"></span>
-            <span class="icon-menu"></span>
-          </button>
-          <a href="index.html" class="navbar-brand"><img
-              src="assets/img/logo-01.png"
-              alt="" style="width:250px;height:80px;"></a>
-        </div>
-        <div class="collapse navbar-collapse" id="main-navbar">
-          <ul class="navbar-nav mr-auto w-100 justify-content-end">
-            <li class="nav-item active">
-              <a class="nav-link" href="#header-wrap">
-                HOME
-              </a>
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link"       opacity: 1;
-              href="#about">
-
-                EVENTS
-
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="webinar.html">
-
-                WEBINARS
-
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#team">
-                SPEAKERS
-
-              </a>
-            </li>
-
-
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">
-                GALLERY
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faq">
-                FAQ
-              </a>
-            </li>
-            <li class="nav-item-active">
-              <a class="nav-link" href="index.html#sponsors">
-                SPONSORS
-              </a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#pricing">
-                  pricing
-                </a>
-              </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-map">
-                CONTACT US
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="team.html">
-                TEAM
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Mobile Menu Start -->
-      <ul class="mobile-menu">
-        <li>
-          <a class="page-scroll" href="#header-wrap"> HOME</a>
-        </li>
-
-
-        <li>
-          <a class="page-scroll" href="#about">
-            EVENTS
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="page-scroll" href="webinar.html">
-
-            WEBINARS
-
-          </a>
-        </li>
-        <li>
-          <a class="page-scroll" href="index.html#team">SPEAKERS
-          </a>
-        </li>
-
-        <li>
-          <a class="page-scroll" href="#gallery">GALLERY</a>
-        </li>
-        <li>
-          <a class="page-scroll" href="#faq">FAQ</a>
-        </li>
-        <li>
-          <a class="page-scroll" href="index.html#sponsors
-            ">SPONSORS
-          </a>
-        </li>
-        <!-- <li>
-            <a class="page-scroll" href="#pricing">pricing</a>
-          </li> -->
-        <li>
-          <a class="page-scroll" href="#contact-map">CONTACT US</a>
-        </li>
-      </ul>
-      <!-- Mobile Menu End -->
-
-    </nav>
-    <!-- Navbar End -->
-    
-
-
-    <!-- Main Carousel Section Start -->
-    <div id="main-slide" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#main-slide" data-slide-to="0" class="active"></li>
-        <li data-target="#main-slide" data-slide-to="1"></li>
-        <li data-target="#main-slide" data-slide-to="2"></li>
-        <li data-target="#main-slide" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100 carousel-img" src="assets/img/header1.jpg" alt="First slide">
-          <!-- <div class="carousel-caption d-md-block">
-              <p class="fadeInUp wow" data-wow-delay=".6s">
-               Grand Event on Digital Design</p>
-              <h1 class="wow fadeInDown heading" data-wow-delay=".4s">Design Thinking Conference</h1>
-              <a href="#" class="fadeInLeft wow btn btn-common btn-lg" data-wow-delay=".6s">Get Ticket</a>
-              <a href="#" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Explore More</a>
-            </div> -->
-          <div class="carousel-caption d-md-block">
-            <p class="fadeInUp wow" data-wow-delay=".6s">IIC MNNIT</p>
-            <p class="fadeInUp wow" data-wow-delay=".6s">An Annual Entrepreneurship Summit</p>
-            <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Renaissance 6.0</h1>
-            <!--<p class="fadeInUp wow" data-wow-delay=".6s">March 28-29 , 2020</p>-->
-            <!-- <a href="#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a> -->
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100 carousel-img" src="assets/img/header2.jpg" alt="Second slide">
-          <div class="carousel-caption d-md-block">
-            <p class="fadeInUp wow" data-wow-delay=".6s">IIC MNNIT</p>
-            <p class="fadeInUp wow" data-wow-delay=".6s">An Annual Entrepreneurship Summit</p>
-            <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Renaissance 6.0</h1>
-            <!-- <p class="fadeInUp wow" data-wow-delay=".6s">March 28-29 , 2020</p>-->
-            <!-- <a href="#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a> -->
-          </div>
-          <!-- <div class="carousel-caption d-md-block">
-              <p class="fadeInUp wow" data-wow-delay=".6s">Global Grand Event on Digital Design</p>
-              <h1 class="wow bounceIn heading" data-wow-delay=".7s">22 Amazing 
-              </h1>
-              <a href="#" class="fadeInUp wow btn btn-border btn-lg" data-wow-delay=".8s">Learn More</a>
-            </div> -->
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100 carousel-img" src="assets/img/4.jpg" alt="Third slide">
-          <div class="carousel-caption d-md-block">
-            <p class="fadeInUp wow" data-wow-delay=".6s">IIC MNNIT</p>
-            <p class="fadeInUp wow" data-wow-delay=".6s">An Annual Entrepreneurship Summit</p>
-            <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Renaissance 6.0</h1>
-            <!--<p class="fadeInUp wow" data-wow-delay=".6s">March 28-29 , 2020</p>-->
-            <!-- <a href="#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a> -->
-          </div>
-          <!-- <div class="carousel-caption d-md-block">
-              <p class="fadeInUp wow" data-wow-delay=".6s">Global Grand Event on Digital Design</p>
-              <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Book Your Seat Now!</h1>
-              <a href="#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a>
-            </div> -->
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100 carousel-img" src="assets/img/DSC_7547.jpg" alt="Forth slide">
-          <!-- <div class="carousel-caption d-md-block">
-              <p class="fadeInUp wow" data-wow-delay=".6s">Global Grand Event on Digital Design</p>
-              <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Book Your Seat Now!</h1>
-              <a href="#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a>
-            </div> -->
-          <div class="carousel-caption d-md-block">
-            <p class="fadeInUp wow" data-wow-delay=".6s">IIC MNNIT</p>
-            <p class="fadeInUp wow" data-wow-delay=".6s">An Annual Entrepreneurship Summit</p>
-            <h1 class="wow fadeInUp heading" data-wow-delay=".6s">Renaissance 6.0</h1>
-            <!--<p class="fadeInUp wow" data-wow-delay=".6s">March 28-29 , 2020</p>-->
-            <!-- <a href="#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">Explore</a> -->
-          </div>
-        </div>
-
-      </div>
-      <a class="carousel-control-prev" href="#main-slide" role="button" data-slide="prev">
-        <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-left"></i></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#main-slide" role="button" data-slide="next">
-        <span class="carousel-control" aria-hidden="true"><i class="lni-chevron-right"></i></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <!-- Main Carousel Section End -->
-
-  </header>
-  <!-- Header Area wrapper End -->
-
-  <!-- <div class="
-    ">
-      <a href=" https://www.
-      .ecellmnnit.in/login " target="_blank"><button class="btn btn-sm btn-xs" id="sponsor-btn" style="font-weight:bold;">
-      <br> Now!</button></a>
-</div> -->
-
-  <div class="register">
-    <p><b><a href="https://register.ecellmnnit.in/login" target="_blank"><button class="btn btn-sm btn-xs"
-            id="sponsor-btn" style="font-weight:bold;">Register<br> Now!</button></a></b></p>
-  </div>
-
-
-  <!-- Coundown Section Start 
-     <section class="countdown-timer section-padding" id="bg" >
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="heading-count">
-              <h2 class="wow fadeInDown" data-wow-delay="0.2s"><b>Event Will Start In</b></h2>
-            </div>
-          </div>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="row time-countdown justify-content-center wow fadeInUp" data-wow-delay="0.2s">
-              <div id="clock" class="time-count"></div>
-            </div>
-            <a href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20200328%2F20200330&text=Renaissance%20Ecell%20MNNIT&location=MP-hall%20MNNIT%20Teliarganj&details=Renaissance%20MNNIT%20Helps%20you%20to%20be%20a%20better%20entrepreneur.%20Be%20a%20part%20of%20it.%20MNNIT%20welcomes%20you." class="btn btn-common wow fadeInUp" data-wow-delay="0.3s">Add to My Calender</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Coundown Section End -->
-  <!-- About Us Section Start -->
-  <section id="aboutus" class="section-padding" style=" background:url('assets/img/backgrounds/aboutv2.png');background-size: cover; background-position: bottom;">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <center>
-              <div style="max-width: 70%;">
-                <h1 class="section-title section-title-white wow fadeInUp" data-wow-delay="0.2s">About Us</h1>
-                <p class="wow fadeInDown p_color" data-wow-delay="0.2s"><b>Renaissance, an entrepreneurship summit, under Design
-                  Innovation and Incubation Center (DIIC) envisages to support innovative ideas of an individual or a
-                  group of individuals in areas related to the development of new products/goods for the benefit of
-                  mankind and/or novel approaches addressing social issues for inclusive development of the society.
-                  <br>
-                  It also intends to bring together technologists, engineers, medical professionals, business analysts
-                  to develop all inclusive innovation that creates an impact on the quality of life through
-                  talks,discussions and workshops.</b></p>
-
-              </div>
-            </center>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- About Us Section End -->
-
-
-
-
-  <!-- About Section Start -->
-  <section id="about" class="section-padding" style="
-    background: url('assets/img/backgrounds/events.png');
-    background-size: cover;
-">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <h1  class="section-title section-title-primary wow fadeInUp h1_color_new" data-wow-delay="0.2s" >Our Events</h1>
-            </h1>
 
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-4" class="fadeInUp wow" data-wow-delay=".6s">
-          <div class="about-item img-wrapper">
-            <img class="img-fluid" src="assets/img/etalk.png" alt="">
-            <div class="overlay about-text" style="padding: 0; padding-left: 0.5em;">
-              <h3 style="font-size: 1.5rem; margin-top: 1.5em;"><a href="etalk.html">E-Talk</a></h3>
-              <p class="event-para">Feel the challenging
-                of top officials to successful start-up founders, from bureaucrats to eminent corporate professionals.<br>
-                <a class="btn btn-common btn-rm" style="font-size: 1.1rem; margin-top: 5em" href="etalk.html">Read More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-xs-12 col-md-6 col-lg-4" class="fadeInUp wow" data-wow-delay=".6s">
-          <div class="about-item img-wrapper">
-            <img class="img-fluid" src="assets/img/eplan.png" alt="">
-            <div class="overlay about-text" style="padding: 0; padding-left: 0.5em;">
-              <h3 style="font-size: 1.5rem; margin-top: 1.5em;"><a href="eplan.html">E-Plan</a></h3>
-              <p class="event-para">E-Plan is the perfect event for ideas to spread their wings and take their first flight in production.<br>
-                <a class="btn btn-common btn-rm" style="font-size: 1.1rem; margin-top: 5em" href="eplan.html">Read More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-6 col-lg-4" class="fadeInUp wow" data-wow-delay=".6s">
-          <div class="about-item img-wrapper">
-            <img class="img-fluid" src="assets/img/quiz-01-01.png" alt="">
-            <div class="overlay about-text" style="padding: 0; padding-left: 0.5em;">
-              <h3 style="font-size: 1.5rem; margin-top: 1.5em;"><a href="bizquiz.html">Biz-Quiz</a></h3>
-              <p class="event-para">Put on your thinking caps to test your business trivia and drown in the ocean of exciting questions.<br>
-                <a class="btn btn-common btn-rm" style="font-size: 1.1rem; margin-top: 5em" href="bizquiz.html">Read More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-6 col-lg-4" class="fadeInUp wow" data-wow-delay=".6s">
-          <div class="about-item img-wrapper">
-            <img class="img-fluid" src="assets/img/panel-01.png" alt="">
-            <div class="overlay about-text" style="padding: 0; padding-left: 0.5em;">
-              <h3 style="font-size: 1.5rem; margin-top: 1.5em;"><a href="paneldiscussion.html">Panel Discussion</a></h3>
-              <p class="event-para">Be a listener to the live enthralling questionnaire with the witty entrepreneurs and renowned
-                personalities of the corporate world.<br>
-                <a class="btn btn-common btn-rm" style="font-size: 1.1rem; margin-top: 5em" href="paneldiscussion.html">Read More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-6 col-lg-4" class="fadeInUp wow" data-wow-delay=".6s">
-          <div class="about-item img-wrapper">
-            <img class="img-fluid" src="assets/img/ipl_auction.png" alt="">
-            <div class="overlay about-text" style="padding: 0; padding-left: 0.5em;">
-              <h3 style="font-size: 1.5rem; margin-top: 1.5em;"><a href="ipl.html">IPL Auction</a></h3>
-              <p class="event-para">Get crores of virtual money and spend it lavishly buying the best players for your IPL team.<br>
-                <a class="btn btn-common btn-rm" style="font-size: 1.1rem; margin-top: 5em" href="ipl.html">Read More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6 col-lg-4" class="fadeInUp wow" data-wow-delay=".6s">
-          <div class="about-item img-wrapper">
-            <img class="img-fluid" src="assets/img/stock_market-01-01.png" alt="">
-            <div class="overlay about-text" style="padding: 0; padding-left: 0.5em;">
-              <h3 style="font-size: 1.5rem; margin-top: 1.5em;"><a href="stock.html">Stock Market</a></h3>
-              <p class="event-para">Virtual money, virtual stocks, real investments and real learning - come and kickstart your rags to
-                riches story.<br>
-                <a class="btn btn-common btn-rm" style="font-size: 1.1rem; margin-top: 5em" href="stock.html">Read More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-  <!-- About Section End -->
-
-  <section class="counter-section section-padding" id="inview_event">
-    <div class="container">
-      <div class="row">
-        <!-- Counter Item -->
-        <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-          <div class="counter wow fadeInRight" data-wow-delay="0.3s">
-            <div class="icon"><i class="lni-users"></i></div>
-            <h2 class="timer count-title count-number" data-to="12500" data-speed="5000" style="color: white;">12500+
-            </h2>
-            <p class="count-text ">ATTENDEES</p>
-          </div>
-        </div>
-        <!-- Counter Item -->
-        <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-          <div class="counter wow fadeInRight" data-wow-delay="0.6s">
-            <div class="icon"><i class="lni-user"></i></div>
-            <h2 class="timer count-title count-number" data-to="80" data-speed="5000" style="color: white;">80+</h2>
-            <p>
-              SPEAKERS
-            </p>
-          </div>
-        </div>
-        <!-- Counter Item -->
-        <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-          <div class="counter wow fadeInRight" data-wow-delay="0.9s">
-            <div class="icon"><i class="lni-bulb"></i></div>
-            <h2 class="timer count-title count-number" data-to="300" data-speed="5000" style="color: white;">300+</h2>
-            <p>IDEAS SUBMITTED</p>
-          </div>
-        </div>
-        <!-- Counter Item -->
-        <div class="col-md-6 col-lg-3 col-xs-12 work-counter-widget text-center">
-          <div class="counter wow fadeInRight" data-wow-delay="1.2s">
-            <div class="icon"><i class="lni-calendar"></i></div>
-            <h2 class="timer count-title count-number" data-to="65" data-speed="5000" style="color: white;">65+</h2>
-            <p class="count-text ">SESSIONS</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Schedule Section Start -->
-  <!-- <section id="schedules" class="schedule section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h1 class="section-title section-title-primary wow fadeInUp" data-wow-delay="0.2s">Event Schedules</h1>
-              <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor</p>
-            </div>
-          </div>
-        </div>
-        <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
-          <div class="schedule-tab-title col-md-3 col-lg-3 col-xs-12">
-            <div class="table-responsive">
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="monday" aria-expanded="true">
-                    <div class="item-text">
-                      <h4>Monday</h4>
-                      <h5>14 February</h5>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="#tuesday" role="tab" aria-controls="tuesday">
-                    <div class="item-text">
-                      <h4>Tuesday</h4>
-                      <h5>15 February</h5>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="wednesday-tab" data-toggle="tab" href="#wednesday" role="tab" aria-controls="wednesday">
-                    <div class="item-text">
-                      <h4>Wednesday</h4>
-                      <h5>16 February</h5>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="thursday-tab" data-toggle="tab" href="#thursday" role="tab" aria-controls="thursday">
-                    <div class="item-text">
-                      <h4>Thursday</h4>
-                      <h5>17 February</h5>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="schedule-tab-content col-md-9 col-lg-9 col-xs-12 clearfix">
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="monday" role="tabpanel" aria-labelledby="monday-tab">
-                <div id="accordion">
-                  <div class="card">
-                    <div id="headingOne">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingTwo">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>15 Free Productive Design Tools</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingThree">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Getting Started With SketchApp</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
-                <div id="accordion2">
-                  <div class="card">
-                    <div id="headingOne1">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1" data-parent="#accordion2">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingTwo2">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="wednesday" role="tabpanel" aria-labelledby="wednesday-tab">
-                <div id="accordion3">
-                  <div class="card">
-                    <div id="headingOne3">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseOne3" class="collapse show" aria-labelledby="headingOne3" data-parent="#accordion3">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingTwo3">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseTwo3" class="collapse" aria-labelledby="headingTwo3" data-parent="#accordion3">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingThree3">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseThree3" class="collapse" aria-labelledby="headingThree3" data-parent="#accordion3">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="thursday" role="tabpanel" aria-labelledby="thursday-tab">
-                <div id="accordion4">
-                  <div class="card">
-                    <div id="headingOne">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseOne4" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion4">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingTwo">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo4" aria-expanded="false" aria-controls="collapseTwo4">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseTwo4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion4">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingThree4">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseThree4" class="collapse" aria-labelledby="headingThree" data-parent="#accordion4">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="friday" role="tabpanel" aria-labelledby="friday-tab">
-                <div id="accordion">
-                  <div class="card">
-                    <div id="headingOne">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingTwo">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div id="headingThree">
-                      <div class="collapsed card-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <div class="images-box">
-                          <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg" alt="">
-                        </div>                     
-                        <span class="time">10am - 12:30pm</span>
-                        <h4>Web Design Principles and Best Practices</h4>
-                        <h5 class="name">David Warner</h5>
-                      </div>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div class="card-body">
-                        <p>Consectetur adipisicing elit. Quod distinctio impedit sint accusantium ducimus lites consequuntur innobisl dolores saepe.Proin sit amet turpis lobortis.</p>
-                        <div class="location">
-                          <span>Location:</span> Hall 1 , Building A, Golden Street, Southafrica
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Schedule Section End -->
-
-  <!-- Team Section Start -->
-  <section id="team" class="section-padding text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <h1 class=" section-title section-title-primary wow fadeInUp h1_color_new" data-wow-delay="0.2s">Our Past Speakers</h1>
-            <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Renaissance 6.0</p> -->
-          </div>
-        </div>
-      </div>
-      <div class="row">
-
-        <div class="col-sm-6 col-md-6 col-lg-4">
-
-          <!-- Team Item Starts -->
-
-          <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-img">
-              <img class="img-fluid" src="assets/speakersimg/5.jpg" alt="" class="">
-              <div class="team-overlay">
-
-              </div>
-            </div>
-            <div class="info-text">
-              <h3><a data-toggle="modal" data-target="#Ajitabha">Ajitabha Bose</a></h3>
-              <p class="speakerdes">BDL Studios</p>
-            </div>
-
-
-            <!-- Team Item Ends -->
-          </div>
-          <div class="modal fade" id="Ajitabha" tabindex="-1" role="dialog" aria-labelledby="Ajitabha"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#2C899A">
-                  <h5 class="modal-title" id="Ajitabha" style="color:white">Ajitabha Bose</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Ajitabha Bose is a renowned and best-selling Indian author, filmmaker, designer and entrepreneur. He
-                  holds the national record for publishing the smallest love story book in India, thus introducing the
-                  remarkable idea of pocketbooks in the country. He is the Chairman & Co-Founder of BDL Studios, a
-                  renowned production house based in Delhi-NCR and has worked in 300+ videos and made 15,000+ designs
-                  till date.
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    style="background-color:#2C899A">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-4">
-
-          <!-- Team Item Starts -->
-
-          <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-img">
-              <img class="img-fluid" src="assets/speakersimg/1.jpg" alt="" class="">
-              <div class="team-overlay">
-
-              </div>
-            </div>
-            <div class="info-text">
-              <h3><a data-toggle="modal" data-target="#Murugavel">Murugavel Janakiraman</a></h3>
-              <p class="speakerdes">Matrimony.com</p>
-            </div>
-
-
-            <!-- Team Item Ends -->
-          </div>
-          <div class="modal fade" id="Murugavel" tabindex="-1" role="dialog" aria-labelledby="Murugavel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#2C899A">
-                  <h5 class="modal-title" id="Murugavel" style="color:white">Murugavel Janakiraman</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Murugavel Janakiraman is the Founder and CEO of Matrimony.com – whose flagship brand is
-                  BharatMatrimony, which has more than 4000 associates, serves over 3 million active members and 140+
-                  retail stores in 20 cities of the country. He was nominated twice by The Economic Times for the
-                  “Entrepreneur of the Year” award. Besides being awarded Digital Entrepreneur of the Year by WAT, he
-                  was also the Chairman of the IAMAI (Internet and Mobile Association of India).
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    style="background-color:#2C899A">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-4">
-
-          <!-- Team Item Starts -->
-
-          <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-img">
-              <img class="img-fluid" src="assets/speakersimg/3.jpg" alt="" class="">
-              <div class="team-overlay">
-
-              </div>
-            </div>
-            <div class="info-text">
-              <h3><a data-toggle="modal" data-target="#PankhuriShrivatava">Pankhuri Shrivastava</a></h3>
-              <p class="speakerdes">Grabhouse</p>
-            </div>
-
-
-            <!-- Team Item Ends -->
-          </div>
-          <div class="modal fade" id="PankhuriShrivatava" tabindex="-1" role="dialog"
-            aria-labelledby="PankhuriShrivatava" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#2C899A">
-                  <h5 class="modal-title" id="PankhuriShrivatava" style="color:white">Pankhuri Shrivastava</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Pankhuri Shrivastava is the co-founder and CMO of Grabhouse.com and is one of the youngest female
-                  entrepreneurs in India. She has completed 2 years of Teach for India fellowship, addressing
-                  educational inequality in India. Currently, she works as a growth marketing consultant for various
-                  startups and has launched her second entrepreneurial venture, Pankhuri Weddings Company, a virtual
-                  assistant for wedding planning in India.
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    style="background-color:#2C899A">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html"><span>E-</span>Assignmento</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
       </div>
 
-      <div class="row" id="speakers">
-
-
-
-
-        <div class="col-sm-6 col-md-6 col-lg-4">
-
-          <!-- Team Item Starts -->
-
-          <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-img">
-              <img class="img-fluid" src="assets/speakersimg/4.jpg" alt="" class="">
-              <div class="team-overlay">
-
-              </div>
-            </div>
-            <div class="info-text">
-              <h3><a data-toggle="modal" data-target="#Sushil">Sushil Kumar</a></h3>
-              <p class="speakerdes">LOCO</p>
-            </div>
-
-
-            <!-- Team Item Ends -->
-          </div>
-          <div class="modal fade" id="Sushil" tabindex="-1" role="dialog" aria-labelledby="Sushil" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#2C899A">
-                  <h5 class="modal-title" id="Sushil" style="color:white">Sushil Kumar</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Sushil Kumar is the co-founder of Loco, India’s first interactive game show app. The app rolled out in
-                  early December of 2017 and has since had 15M+ downloads. He has also worked as a web Developer at
-                  Unacademy, India’s largest online learning platform.
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    style="background-color:#2C899A">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-sm-6 col-md-6 col-lg-4">
-
-          <!-- Team Item Starts -->
-
-          <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-img">
-              <img class="img-fluid" src="assets/speakersimg/2.jpg" alt="" class="">
-              <div class="team-overlay">
-
-              </div>
-            </div>
-            <div class="info-text">
-              <h3><a data-toggle="modal" data-target="#SandeepJain">Sandeep Jain</a></h3>
-              <p class="speakerdes">Geeks for Geeks</p>
-            </div>
-
-
-            <!-- Team Item Ends -->
-          </div>
-          <div class="modal fade" id="SandeepJain" tabindex="-1" role="dialog" aria-labelledby="SandeepJain"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#2C899A">
-                  <h5 class="modal-title" id="SandeepJain" style="color:white">Sandeep Jain</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Sandeep Jain is the founder and CEO of GeeksForGeeks. Computer programming has become more or less a
-                  mandatory skill that all companies look for in a potential candidate. However, the outdated curriculum
-                  of most institutions has students resorting to other means like tuitions. Recognising the need of the
-                  hour, Sandeep Jain created the one-stop destination for all those looking to master coding -
-                  GeeksForGeeks.
-
-                  A computer science portal for coding enthusiasts, it contains extremely informative articles
-                  explaining programming concepts, practice quizzes and company interview/programming questions.
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    style="background-color:#2C899A">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="col-sm-6 col-md-6 col-lg-4">
-
-          <!-- Team Item Starts -->
-
-          <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-            <div class="team-img">
-              <img class="img-fluid" src="assets/speakersimg/6.jpg" alt="" class="">
-              <div class="team-overlay">
-
-              </div>
-            </div>
-            <div class="info-text">
-              <h3><a data-toggle="modal" data-target="#vivek">Vivek Prakash</a></h3>
-              <p class="speakerdes">Hackerearth</p>
-            </div>
-
-
-            <!-- Team Item Ends -->
-          </div>
-          <div class="modal fade" id="vivek" tabindex="-1" role="dialog" aria-labelledby="vivek" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color:#2C899A">
-                  <h5 class="modal-title" id="vivek" style="color:white">Vivek Prakash</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Vivek Prakash is the co-founder of HackerEarth. What with technology plotting a major takeover,
-                  securing a job has taken precedence over eating, sleeping and breathing!
-
-                  Mr. Vivek Prakash, a computer science graduate from IIT Roorkee, is a two time Google Summer of Code
-                  candidate and co-founder of MyCareerStack - a platform to help college students prepare for technical
-                  interviews and HackerEarth - a software provider for innovation management & talent assessment.
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                    style="background-color:#2C899A">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-      <!-- Team Item Ends -->
-    </div>
-    </div>
-    <a href="speakers.html" class="btn btn-common mt-30 wow fadeInUp" data-wow-delay="1.9s">All Speakers</a>
-    </div>
-  </section>
-  <!-- Team Section End -->
-
-
-  <!-- Gallary Section End -->
-  <section id="gallery" class="section-padding" style="background-image: url(assets/img/backgrounds/gallery.png);background-position: center center; background-repeat: no-repeat;background-size: cover;">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <h1 class="section-title section-title-white wow fadeInUp" data-wow-delay="0.2s" >Our event gallery</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-4">
-          <div class="gallery-box">
-            <div class="img-thumb">
-              <img class="img-fluid" src="assets/img/gallery/gallery11.jpg" alt="">
-            </div>
-            <div class="overlay-box text-center">
-              <a class="lightbox" href="assets/img/gallery/gallery11.jpg">
-                <i class="lni-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="ccol-md-6 col-sm-6 col-lg-4">
-          <div class="gallery-box">
-            <div class="img-thumb">
-              <img class="img-fluid" src="assets/img/gallery/gallery13.jpg" alt="">
-            </div>
-            <div class="overlay-box text-center">
-              <a class="lightbox" href="assets/img/gallery/gallery13.jpg">
-                <i class="lni-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="ccol-md-6 col-sm-6 col-lg-4">
-          <div class="gallery-box">
-            <div class="img-thumb">
-              <img class="img-fluid" src="assets/img/gallery/gallery16.jpg" alt="">
-            </div>
-            <div class="overlay-box text-center">
-              <a class="lightbox" href="assets/img/gallery/gallery16.jpg">
-                <i class="lni-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="ccol-md-6 col-sm-6 col-lg-4">
-          <div class="gallery-box">
-            <div class="img-thumb">
-              <img class="img-fluid" src="assets/img/gallery/gallery2.jpg" alt="">
-            </div>
-            <div class="overlay-box text-center">
-              <a class="lightbox" href="assets/img/gallery/gallery2.jpg">
-                <i class="lni-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="ccol-md-6 col-sm-6 col-lg-4">
-          <div class="gallery-box">
-            <div class="img-thumb">
-              <img class="img-fluid" src="assets/img/gallery/gallery3.jpg" alt="">
-            </div>
-            <div class="overlay-box text-center">
-              <a class="lightbox" href="assets/img/gallery/gallery3.jpg">
-                <i class="lni-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="ccol-md-6 col-sm-6 col-lg-4">
-          <div class="gallery-box">
-            <div class="img-thumb">
-              <img class="img-fluid" src="assets/img/gallery/gallery7.jpg" alt="">
-            </div>
-            <div class="overlay-box text-center">
-              <a class="lightbox" href="assets/img/gallery/gallery7.jpg">
-                <i class="lni-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center mt-3">
-        <div class="col-xs-12">
-          <a href="gallery.html" class="btn btn-common">Browse All</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Ask Question Section Start -->
-  <br>
-  <!-- <section id="faq" class="section-padding" style="background-image: linear-gradient(to bottom, #c9d6ff, #a8bfee, #85a9dc, #5e94cb, #2980b9);"> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-              
-            <h1 class="section-title section-title-primary wow fadeInUp h1_color_new" data-wow-delay="0.2s" >Frequently Asked Questions</h1>
-
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-          <div class="accordion">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <div class="header-title" data-toggle="collapse" data-target="#questionOne" aria-expanded="true"
-                  aria-controls="collapseOne">
-                  <i class="lni-pencil"></i> What are the necessary documents that I am supposed to bring?
-                </div>
-              </div>
-              <div id="questionOne" class="collapse" aria-labelledby="headingOne" data-parent="#question">
-                <div class="card-body">
-                  For students who have not applied for accommodation, college identity card and ticket is sufficient.
-                  If applied for accommodation, failing to bring any of the required documents may lead to rejection of
-                  your accommodation. The documents are: Gate Pass for the electronic gadgets you are carrying like
-                  laptops, camera, etc. Ticket received after paying online. Accommodation Confirmation mail from Team.
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <div class="header-title" data-toggle="collapse" data-target="#questionTwo" aria-expanded="false"
-                  aria-controls="questionTwo">
-                  <i class="lni-pencil"></i> What is the payment procedure?
-                </div>
-              </div>
-              <div id="questionTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
-                <div class="card-body">
-                  The payment can be made online or at the time you come to MNNIT Allahabad, but you will have to pay an
-                  extra INR 100/- for on venue registration. Though it is preferred that you pay the registration and
-                  accommodation charges online or through campus ambassador as there are limited seats and
-                  accommodations. There are no extra charges for those who have registered for E-Summit. All events are
-                  included in the registration fee.
-                </div>
-              </div>
-            </div>
-
-
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <div class="header-title" data-toggle="collapse" data-target="#questionFour" aria-expanded="false"
-                  aria-controls="questionFour">
-                  <i class="lni-pencil"></i> What are the different categories for registration?
-                </div>
-              </div>
-              <div id="questionFour" class="collapse" aria-labelledby="headingThree" data-parent="#question">
-                <div class="card-body">
-                  Individual – If you want to attend Renaissance as an individual and not as a part of college
-                  contingent, please register under this category. Fee is INR 500/-. <br>
-                  If you are an MNNIT Allahabad student, you do not have to pay to attend Summit. Please carry your ID
-                  card at all the time during the events.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-          <div class="accordion">
-            <div class="card">
-              <div class="card-header" id="headingOne2">
-                <div class="header-title" data-toggle="collapse" data-target="#questionOne2" aria-expanded="true"
-                  aria-controls="collapseOne">
-                  <i class="lni-pencil"></i> Can one person take part in more than one team?
-                </div>
-              </div>
-              <div id="questionOne2" class="collapse" aria-labelledby="headingOne" data-parent="#question">
-                <div class="card-body">
-                  Not in case of the same event. In case a person is registered in 2 teams for the same event, the team
-                  in which the person registers latter will be considered as the team for the participant.
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo2">
-                <div class="header-title" data-toggle="collapse" data-target="#questionTwo2" aria-expanded="false"
-                  aria-controls="questionTwo">
-                  <i class="lni-pencil"></i> Will the outside participants be given accommodation on campus?
-                </div>
-              </div>
-              <div id="questionTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
-                <div class="card-body">
-                  Yes they will be provided accommodation on campus on first come first serve basis.To reserve their
-                  seat one has to send their accomodation request to renaissance@mnnit.ac.in
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <div class="header-title" data-toggle="collapse" data-target="#questionFive" aria-expanded="false"
-                  aria-controls="questionFive">
-                  <i class="lni-pencil"></i> Can any alterations be made in the registered team prior to the event?
-                </div>
-              </div>
-              <div id="questionFive" class="collapse" aria-labelledby="headingThree" data-parent="#question">
-                <div class="card-body">
-                  Yes, the registered team can be altered upto 2 days before the event.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Ask Question Section End -->
-<br>
-  <!-- Sponsors Section Start -->
-  <section id="sponsors" class="section-padding"
-    style="background-image: url(assets/img/backgrounds/sponsv6.png);background-repeat: no-repeat; background-position: center center; background-size: cover;">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <h1 class="section-title section-title-white wow fadeInUp" data-wow-delay="0.2s">Past Sponsors</h1>
-            <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Renaissance 6.0</p> -->
-          </div>
-        </div>
-      </div>
-      <div class="row mb-30 text-center wow fadeInDown" data-wow-delay="0.3s">
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="spnsors-logo">
-            <a href="http://up.gov.in"><img class="img-fluid" src="assets/img/sponsor/start1.jpg" alt=""></a>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="spnsors-logo">
-            <a href="https://www.teqip.in"><img class="img-fluid" src="assets/img/sponsor/teqip.png" alt=""></a>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="spnsors-logo">
-            <a href="https://paytm.com"><img class="img-fluid" src="assets/img/sponsor/paytm.jpg" alt=""></a>
-          </div>
-        </div>
-        <div class="col-12 text-center">
-          <a href="sponsors.html" class="btn btn-common">View all sponsors</a>
-        </div>
-        <div class="col-12 text-center" style="padding-top:2%">
-          <a href="https://drive.google.com/file/d/18GE3-thDytPzi3l8rH4LMEQk-l33sq8W/view?usp=drivesdk"
-            class="btn btn-common">Become a sponsor</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Sponsors Section End -->
-
-  <!-- Ticket Pricing Area Start -->
-  <!-- <section id="pricing" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h1 class="section-title section-title-primary wow fadeInUp" data-wow-delay="0.2s">Our Pricing</h1>
-              <p class="wow fadeInDown" data-wow-delay="0.2s">Global Grand Event on Digital Design</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 col-xa-12 mb-3">
-            <div class="price-block-wrapper wow fadeInLeft" data-wow-delay="0.2s">
-              <div class="icon">
-                <i class="lni-write"></i>
-              </div>
-              <div class="colmun-title">
-                <h5>Basic Pass</h5>
-              </div>
-              <div class="price">
-                <h2>$29</h2>
-                <p>452 Tickets Available</p>
-              </div>
-              <div class="pricing-list">
-                <ul>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Entrance</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Coffee Break</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Lunch on all days</span></li>
-                  <li><i class="lni-close"></i><span class="text">Access to all areas</span></li>
-                  <li><i class="lni-close"></i><span class="text">Certificate</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Workshop</span></li>
-                </ul>
-              </div>
-              <a href="#" class="btn btn-common">Buy Ticket</a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-xa-12 mb-3">
-            <div class="price-block-wrapper wow fadeInUp" data-wow-delay="0.3s">
-              <div class="icon">
-                <i class="lni-layers"></i>
-              </div>
-              <div class="colmun-title">
-                <h5>Standard Pass</h5>
-              </div>
-              <div class="price">
-                <h2>$40</h2>
-                <p>452 Tickets Available</p>
-              </div>
-              <div class="pricing-list">
-                <ul>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Entrance</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Coffee Break</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Lunch on all days</span></li>
-                  <li><i class="lni-close"></i><span class="text">Access to all areas</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Certificate</span></li>
-                  <li><i class="lni-close"></i><span class="text">Workshop</span></li>
-                </ul>
-              </div>
-              <a href="#" class="btn btn-common">Buy Ticket</a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 col-xa-12 mb-3">
-            <div class="price-block-wrapper wow fadeInRight" data-wow-delay="0.4s">
-              <div class="icon">
-                <i class="lni-leaf"></i>
-              </div>
-              <div class="colmun-title">
-                <h5>Premium Pass</h5>
-              </div>
-              <div class="price">
-                <h2>$68</h2>
-                <p>452 Tickets Available</p>
-              </div>
-              <div class="pricing-list">
-                <ul>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Entrance</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Coffee Break</span></li>
-                  <li><i class="lni-close"></i><span class="text">Lunch on all days</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Access to all areas</span></li>
-                  <li><i class="lni-check-mark-circle"></i><span class="text">Certificate</span></li>
-                  <li><i class="lni-close"></i><span class="text">Workshop</span></li>
-                </ul>
-              </div>
-              <a href="#" class="btn btn-common">Buy Ticket</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Ticket Pricing Area End -->
-  <!-- Services Section Start -->
-  <section id="services" class="services section-padding" style="background-image: linear-gradient(to bottom, #08647a, #176b80, #217286, #2a798d, #338093, #458a9d, #5695a6, #669fb0, #81b0bf, #9bc0cf, #b5d2de, #cee3ed);">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <h1 class="section-title section-title-white wow fadeInUp" data-wow-delay="0.2s">Lines of Appreciation</h1>
-
-          </div>
-        </div>
-      </div>
-      <div class="row services-wrapper">
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
-          <div class="services-item wow fadeInDown" data-wow-delay="0.2s">
-
-            <div class="icon">
-              <img src="assets/img/quotes/rajeev.jpg" style="border-radius:50%">
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Rajeev Tripathi<br>Director MNNIT Allahabad</a></h3>
-              <p>" I duly hope the legacy continues eternally and provide ample opportunities to cater and optimistic
-                demeanour towards being an entrepreneur, surpassing the bars set by the previous endeavours. I heartily
-                welcome everyone to be a part of 6.0 E-summit Renaissance 2020 and make it a grand success with your
-                support and enthusiasm. "</p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
-          <div class="services-item wow fadeInDown" data-wow-delay="0.4s">
-            <div class="icon">
-              <img src="assets/img/quotes/chetu.jpg" style="border-radius:50%">
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Chetanya Golecha<br>Co-Founder Water Float</a></h3>
-              <p >"A great event, packed with so<br> much young audience and great  <br>speakers,offering a <br>unique balance
-                between entrepreneurship <br> and industrial applications.<br>In short:<br> offering a compact source of
-                inspiration & opportunity ."</p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-4 col-xs-12 padding-none">
-          <div class="services-item wow fadeInDown" data-wow-delay="0.6s">
-            <div class="icon">
-              <img src="assets/img/quotes/gary.jpg" style="border-radius:50%">
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Gary Dalal<br>Director, Apptology FZCO</a></h3>
-              <p>"I would like to give my personal  congrats to the entire team of NIT Allahabad  for putting up a
-              <p>"I would like to give my personal  congrats to the entire team of NIT Allahabad  for putting up a
-                wonderful event. The attendees were more than ecstatic than what I have ever seen anywhere else and it
-                is this spirit that puts up a favourable stage for people like us to speak / perform."</p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-6 col-xs-12 padding-none">
-          <div class="services-item wow fadeInDown" data-wow-delay="0.8s">
-            <div class="icon">
-              <img src="assets/img/quotes/abhilekh.jpg" style="border-radius:50%">
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Abhilekh Agarwal<br> CTO Cube26</a></h3>
-              <p>"It was a great effort by Team Renaissance.<br> Greatly appreciated coming back to college. Your hard work
-                and efforts has lead to such successful event."</p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-        <div class="col-md-6 col-lg-6 col-xs-12 padding-none">
-          <div class="services-item wow fadeInDown" data-wow-delay="1s">
-            <div class="icon">
-              <img src="assets/img/quotes/mansi.jpg" style="border-radius:50%">
-            </div>
-            <div class="services-content">
-              <h3><a href="#">Mansi Matela,<br>Head - Strategy &amp; New Initiatives at SilverPus</a></h3>
-              <p>"I was thrilled to see such an amazing audience. The events were extraordinary and it surely made an
-                impact to many aspiring entrepreneurs. A platform for the genesis of great ideas."</p>
-            </div>
-          </div>
-        </div>
-        <!-- Services item -->
-
-      </div>
-    </div>
-  </section>
-  <!-- Services Section End -->
-  <!-- Event Slides Section Start -->
-  <section id="event-slides" class="section-padding" style=" background-image:url(assets/img/backgrounds/ourjourney-01.png);
-    background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center; ">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title-header text-center">
-            <h1 class="section-title section-title-white wow fadeInUp h1_color_new" data-wow-delay="0.2s">Our Journey</h1>
-            <p class="wow fadeInDown" data-wow-delay="0.2s">Renaissance since its first edition has been a facilitating
-              platform for start ups to grow.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-          <iframe style="width:100%; height:100%" src="https://www.youtube.com/embed/TdPaaG2WH2o" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s" id="journeypad">
-
-
-          <ul class="list-specification">
-
-            <li><i class="lni-check-mark-circle"></i> <b>We Seed Ideas</b><br>Through Innovation Club classes that our
-              team conducts, we plant ideas in young aspiring minds to flourish</li>
-            <li><i class="lni-check-mark-circle"></i> <b>We Fund</b><br>The ideas are incubated and given appropriate
-              funding.</li>
-            <li><i class="lni-check-mark-circle"></i> <b>Mentorship Session</b><br>Experts of various fields are invited
-              to mentor the start up.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Event Slides Section End -->
-
-  <!-- Blog Section Start -->
-  <!-- <section id="blog" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Our Latest News & Articles</h1>
-              <p class="wow fadeInDown" data-wow-delay="0.2s">Global Grand Event on Digital Design</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="blog-item">
-              <div class="blog-image">
-                <a href="#">
-                  <img class="img-fluid" src="assets/img/blog/img-1.jpg" alt="">
-                </a>
-              </div>
-              <div class="descr">
-                <div class="tag">Design</div>
-                <h3 class="title">
-                  <a href="single-blog.html">
-                    The 9 Design Trends You Need to Know
-                  </a>
-                </h3>
-                <div class="meta-tags">
-                  <span class="date">Jan 20, 2018</span>
-                  <span class="comments">| <a href="#"> by Cindy Jefferson</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="blog-item">
-              <div class="blog-image">
-                <a href="#">
-                  <img class="img-fluid" src="assets/img/blog/img-2.jpg" alt="">
-                </a>
-              </div>
-              <div class="descr">
-                <div class="tag">Design</div>
-                <h3 class="title">
-                  <a href="single-blog.html">
-                    The 9 Design Trends You Need to Know
-                  </a>
-                </h3>
-                <div class="meta-tags">
-                  <span class="date">Jan 20, 2018 </span>
-                  <span class="comments">| <a href="#"> by Cindy Jefferson</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="blog-item">
-              <div class="blog-image">
-                <a href="#">
-                  <img class="img-fluid" src="assets/img/blog/img-3.jpg" alt="">
-                </a>
-              </div>
-              <div class="descr">
-                <div class="tag">Design</div>
-                <h3 class="title">
-                  <a href="single-blog.html">
-                    The 9 Design Trends You Need to Know
-                  </a>
-                </h3>
-                <div class="meta-tags">
-                  <span class="date">Jan 20, 2018</span> 
-                  <span class="comments">| <a href="#"> by Cindy Jefferson</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 text-center">
-            <a href="#" class="btn btn-common">Read More News</a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Blog Section End -->
-
-  <!-- Subscribe Area Start -->
-  <!-- <div id="subscribe" class="section-padding">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-10 col-lg-7">
-            <div class="subscribe-inner wow fadeInDown" data-wow-delay="0.3s">
-              <h2 class="subscribe-title">Sign Up For Our Newsletter</h2>
-              <form class="text-center form-inline">
-                <input class="mb-20 form-control" name="email" placeholder="Enter Your Email Here">
-                <button type="submit" class="btn btn-common sub-btn" data-style="zoom-in" data-spinner-size="30" name="submit" id="submit">
-                <span class="ladda-label"><i class="lni-check-box"></i> Submit</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-  <!-- Map Section Start -->
-  <!-- <section id="google-map-area">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div id="conatiner-map"></div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Map Section End -->
-
-  <!-- Contact Us Section -->
-  <section id="contact-map" class="section-padding" style=" background-image:url(assets/img/backgrounds/anyq.png);
-    background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center; ">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <div class="section-title-header">
-            <h1 class="section-title section-title-white wow fadeInUp" data-wow-delay="0.2s">Any Queries?</h1>
-
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-12 col-xs-12">
-          <div class="container-form wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="form-wrapper">
-              <form role="form" method="post" name="contact-form" data-toggle="validator"
-                action="http://register.ecellmnnit.in/query.php">
-                <div class="row">
-                  <div class="col-md-6 form-line">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="name" name="fullname" placeholder="First Name"
-                        required data-error="Please enter your name">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 form-line">
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required
-                        data-error="Please enter your Email">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <!-- <div class="col-md-12 form-line">
-                      <div class="form-group">
-                        <input type="tel" class="form-control" id="msg_subject" name="subject" placeholder="Subject" required data-error="Please enter your message subject">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div> -->
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <textarea class="form-control" rows="4" id="question" name="query" required
-                        data-error="Write your message" placeholder="Question ? "></textarea>
-                    </div>
-                    <div class="form-submit">
-                      <button type="submit" class="btn btn-common" id="form-submit"><i class="fa fa-paper-plane"
-                          aria-hidden="true"></i> Send Us Now</button>
-                      <div id="msgSubmit" class="h3 text-center hidden"></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Contact Us Section End -->
-
-  <!-- Footer Section Start -->
-  <footer class="footer-area section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
-          <h3><img src="assets/img/foot_logo1.png" alt="" style="width:200px;height:70px;"></h3>
-          <br>
-          <div class="widget">
-            <h5 class="widget-title">FOLLOW US ON</h5>
-            <ul class="footer-social">
-              <li><a class="facebook" href="https://www.facebook.com/mnnitecell"><i class="lni-facebook-filled"></i></a>
-              </li>
-              <li><a class="twitter" href="https://twitter.com/ecellmnnit"><i class="lni-twitter-filled"></i></a></li>
-              <li><a class="linkedin" href="https://www.linkedin.com/in/e-cell-mnnit-210878b4/"><i
-                    class="lni-linkedin-filled"></i></a></li>
-              <li><a class="google-plus" href="https://www.instagram.com/ecellmnnit/"><i
-                    class="lni-instagram-filled"></i></a></li>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li class="menu-has-children"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
             </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.4s" id="t1">
-          <h3>QUICK LINKS</h3>
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="index.html#sponsors">SPONSORS</a></li>
-            <li><a href="index.html#team">SPEAKERS</a></li>
-            <li><a href="gallery.html">GALLLERY</a></li>
-            <!-- <li><a href="#">Event Photo 
-              </a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.6s" id="t2">
-          <h3>EVENTS</h3>
-          <ul>
-            <li><a href="etalk.html">E - TALK</a></li>
-            <li><a href="paneldiscussion.html">PANEL DISCUSSION</a></li>
-            <li><a href="eplan.html">E - PLAN</a></li>
-            <li><a href="bizquiz.html">BIZ - QUIZ</a></li>
-            <li><a href="ipl.html">IPL AUCTION</a></li>
+          </li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
 
-            <!-- <li><a href="#">Event Photo 
-              </a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.8s" style="color:white"
-          id="loc">
-
-          <div class="center" style="color:white;">
-            <i class="lni-map-marker"></i>
-            Innovation and Incubation Center, MNNIT Allahabad, India
-          </div>
-
-          <div class="center" style="color:white;">
-            <i class="lni-phone"></i>
-            945-332-2905, 737-641-1376
-          </div>
-
-          <div class="center" style="color:white;">
-            <i class="lni-envelope"></i>
-            renaissance@mnnit.ac.in
-          </div>
-        </div>
-      </div>
-  </footer>
-  <!-- Footer Section End -->
-
-  <div id="copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="site-info">
-
-            <p>Copyright &copy; RENAISSANCE 2020. All rights reserved</p>
-          </div>
-        </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Welcome to E-Assignmento</h1>
+      <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>
+      <img src="assets/img/hero-img.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
+      <div class="btns">
+        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
       </div>
     </div>
+  </section> <!-- End Hero Section -->
+
+  
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2>Enhancing Skills for Better Future</h2>
+          <p class="separator">absolutely free of cost</p>
+
+        </div>
+      </div>
+
+
+      <br><br>
+  <div class="container" style="border:1px solid black;height:auto;">
+     <h3 style="color:#bb0a0a;text-decoration: underline;">Find Your Assignment </h3>
+
+
+
+
+<!-- The form -->
+<form class="example text-center" action="/find_pdfs" method="POST">
+  <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;">
+     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px">
+  <button type="submit" style="font-size:19px"><i class="fa fa-search"></i></button>
+  </div>
+ 
+</form>
+
+<br>
+<div class="container" id="my_table">
+            
+  <table class="table">
+   
+
+  
+    <tbody>
+
+
+      
+      <tr>
+        
+        <td> 1. Just go to yutube and copy the link of video</td>
+       
+      </tr>
+      <tr>
+        <td>
+          2. paste the link in above search box 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3. click on seach icon
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
   </div>
 
-  <!-- Go to Top Link -->
-  <a href="#" class="back-to-top">
-    <i class="lni-chevron-up"></i>
-  </a>
+</div>
 
-  <!-- <div id="preloader">
-    <div class="sk-circle">
-      <div class="sk-circle1 sk-child"></div>
-      <div class="sk-circle2 sk-child"></div>
-      <div class="sk-circle3 sk-child"></div>
-      <div class="sk-circle4 sk-child"></div>
-      <div class="sk-circle5 sk-child"></div>
-      <div class="sk-circle6 sk-child"></div>
-      <div class="sk-circle7 sk-child"></div>
-      <div class="sk-circle8 sk-child"></div>
-      <div class="sk-circle9 sk-child"></div>
-      <div class="sk-circle10 sk-child"></div>
-      <div class="sk-circle11 sk-child"></div>
-      <div class="sk-circle12 sk-child"></div>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-block">
+
+              <img src="assets/img/svg/cloud.svg" alt="img" class="img-fluid">
+              <h4>introducing whatsapp</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <a href="#">read more</a>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-block">
+
+              <img src="assets/img/svg/planet.svg" alt="img" class="img-fluid">
+              <h4>user friendly interface</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <a href="#">read more</a>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-block">
+
+              <img src="assets/img/svg/asteroid.svg" alt="img" class="img-fluid">
+              <h4>build the app everyone love</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <a href="#">read more</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End Get Started Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us padd-section">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+          <div class="col-md-5 col-lg-3">
+            <img src="assets/img/about-img.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+
+          <div class="col-md-7 col-lg-5">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+
+              <h2><span>E-Assignmento</span>UI Design Mobile </h2>
+              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+              </p>
+
+              <ul class="list-unstyled">
+                <li><i class="fa fa-angle-right"></i>Creative Design</li>
+                <li><i class="fa fa-angle-right"></i>Retina Ready</li>
+                <li><i class="fa fa-angle-right"></i>Easy to Use</li>
+                <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+                <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Amazing Features.</h2>
+          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/paint-palette.svg" alt="img" class="img-fluid">
+              <h4>creative design</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/vector.svg" alt="img" class="img-fluid">
+              <h4>Retina Ready</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/design-tool.svg" alt="img" class="img-fluid">
+              <h4>easy to use</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/asteroid.svg" alt="img" class="img-fluid">
+              <h4>Free Updates</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/asteroid.svg" alt="img" class="img-fluid">
+              <h4>Free Updates</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/cloud-computing.svg" alt="img" class="img-fluid">
+              <h4>App store support</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/pixel.svg" alt="img" class="img-fluid">
+              <h4>Perfect Pixel</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/code.svg" alt="img" class="img-fluid">
+              <h4>clean codes</h4>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Screenshots Section ======= -->
+    <section id="screenshots" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>App Gallery</h2>
+          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+        </div>
+
+        <div class="owl-carousel owl-theme" data-aos="fade-up" data-aos-delay="100">
+
+          <div><img src="assets/img/screen/1.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/2.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/3.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/4.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/5.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/6.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/7.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/8.jpg" alt="img"></div>
+          <div><img src="assets/img/screen/9.jpg" alt="img"></div>
+
+        </div>
+      </div>
+
+    </section><!-- End Screenshots Section -->
+
+    <!-- ======= Video Section ======= -->
+    <section id="video" class="text-center">
+      <div class="overlay">
+        <div class="container-fluid container-full" data-aos="zoom-in">
+
+          <div class="row">
+            <a href="#" class="js-modal-btn play-btn" data-video-id="s22ViV7tBKE"></a>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Video Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2>Team Member</h2>
+          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="team-block bottom">
+              <img src="assets/img/team/1.jpg" class="img-responsive" alt="img">
+              <div class="team-content">
+                <ul class="list-unstyled">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <span>manager</span>
+                <h4>Kimberly Tran</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="team-block bottom">
+              <img src="assets/img/team/2.jpg" class="img-responsive" alt="img">
+              <div class="team-content">
+                <ul class="list-unstyled">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <span>manager</span>
+                <h4>Kimberly Tran</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="team-block bottom">
+              <img src="assets/img/team/3.jpg" class="img-responsive" alt="img">
+              <div class="team-content">
+                <ul class="list-unstyled">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <span>manager</span>
+                <h4>Kimberly Tran</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="team-block bottom">
+              <img src="assets/img/team/4.jpg" class="img-responsive" alt="img">
+              <div class="team-content">
+                <ul class="list-unstyled">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <span>manager</span>
+                <h4>Kimberly Tran</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="padd-section text-center">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+          <div class="col-md-8">
+
+            <div class="testimonials-content">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="carousel-item  active">
+                    <div class="top-top">
+
+                      <h2>Our Users Speack volumes us</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries.</p>
+                      <h4>Kimberly Tran<span>manager</span></h4>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h2>Our Users Speack volumes us</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries.</p>
+                      <h4>Henderson<span>manager</span></h4>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h2>Our Users Speack volumes us</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries.</p>
+                      <h4>David Spark<span>manager</span></h4>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="btm-btm">
+
+                  <ul class="list-unstyled carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ul>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="padd-section text-cente">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2>Meet With Price</h2>
+          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-pricing">
+              <div class="table">
+                <h4>basic</h4>
+                <h2>$29</h2>
+                <ul class="list-unstyled">
+                  <li><b>4 GB</b> Ram</li>
+                  <li><b>7/24</b> Tech Support</li>
+                  <li><b>40 GB</b> SSD Cloud Storage</li>
+                  <li>Monthly Backups</li>
+                  <li>Palo Protection</li>
+                </ul>
+                <div class="table_btn">
+                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-pricing">
+              <div class="table">
+                <h4>PERSONAL</h4>
+                <h2>$29</h2>
+                <ul class="list-unstyled">
+                  <li><b>4 GB</b> Ram</li>
+                  <li><b>7/24</b> Tech Support</li>
+                  <li><b>40 GB</b> SSD Cloud Storage</li>
+                  <li>Monthly Backups</li>
+                  <li>Palo Protection</li>
+                </ul>
+                <div class="table_btn">
+                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-pricing">
+              <div class="table">
+                <h4>BUSINESS</h4>
+                <h2>$29</h2>
+                <ul class="list-unstyled">
+                  <li><b>4 GB</b> Ram</li>
+                  <li><b>7/24</b> Tech Support</li>
+                  <li><b>40 GB</b> SSD Cloud Storage</li>
+                  <li>Monthly Backups</li>
+                  <li>Palo Protection</li>
+                </ul>
+                <div class="table_btn">
+                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-pricing">
+              <div class="table">
+                <h4>profeesional</h4>
+                <h2>$29</h2>
+                <ul class="list-unstyled">
+                  <li><b>4 GB</b> Ram</li>
+                  <li><b>7/24</b> Tech Support</li>
+                  <li><b>40 GB</b> SSD Cloud Storage</li>
+                  <li>Monthly Backups</li>
+                  <li>Palo Protection</li>
+                </ul>
+                <div class="table_btn">
+                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="padd-sectio">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2>Latest posts</h2>
+          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="block-blog text-left">
+              <a href="#"><img src="assets/img/blog/blog-image-1.jpg" alt="img"></a>
+              <div class="content-blog">
+                <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
+                <span>05, juin 2017</span>
+                <a class="pull-right readmore" href="#">read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="block-blog text-left">
+              <a href="#"><img src="assets/img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
+              <div class="content-blog">
+                <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
+                <span>05, juin 2017</span>
+                <a class="pull-right readmore" href="#">read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="block-blog text-left">
+              <a href="#"><img src="assets/img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
+              <div class="content-blog">
+                <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
+                <span>05, juin 2017</span>
+                <a class="pull-right readmore" href="#">read more</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Newsletter Section ======= -->
+    <section id="newsletter" class="newsletter text-center">
+      <div class="overlay padd-section">
+        <div class="container" data-aos="zoom-in">
+
+          <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-6">
+              <form class="form-inline" method="POST" action="#">
+
+                <input type="email" class="form-control " placeholder="Email Adress" name="email">
+                <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
+
+              </form>
+
+            </div>
+          </div>
+
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </section><!-- End Newsletter Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="padd-section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Contact</h2>
+          <p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="fa fa-envelope"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">E-Assignmento</a>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="./contr">Contribute</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Support</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">faq</a></li>
+              <li><a href="#">Editor help</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div> -->
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="assets/js/jquery-min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.countdown.min.js"></script>
-  <script src="assets/js/jquery.nav.js"></script>
-  <script src="assets/js/jquery.easing.min.js"></script>
-  <script src="assets/js/wow.js"></script>
-  <script src="assets/js/jquery.slicknav.js"></script>
-  <script src="assets/js/nivo-lightbox.js"></script>
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights E-Assignmento. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=E-Assignmento
+        -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/modal-video/js/modal-video.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/form-validator.min.js"></script>
-  <script src="assets/js/contact-form-script.min.js"></script>
-  <script src="assets/js/map.js"></script>
-  <script src="assets/js/Counters.js"></script>
-
 
 </body>
-
-
-<style>
-  .covid {
-    position: relative;
-    font-size: 2.4em;
-    font-weight: 900;
-    color: #fff;
-    z-index: 1;
-    overfLow: hidden;
-    margin: 0% 0% 0% 0%;
-  }
-
-  .covid:before {
-    content: '';
-    position: absolute;
-    /* left: -% ;  */
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent 0%, 5%, #000 100%);
-    animation: animate 2.5s linear forwards;
-  }
-
-  @keyframes animate {
-    0% {
-      left: 0%;
-    }
-
-    100% {
-      left: 100%;
-    }
-  }
-
-
-
-  .covid span {
-    color: #ff022c;
-  }
-</style>
 
 </html>

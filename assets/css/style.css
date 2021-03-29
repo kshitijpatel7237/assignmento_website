@@ -1477,7 +1477,7 @@ section {
 /* login css */
 @media (min-width: 576px){
   .modal-dialog {
-    max-width: 400px;
+    max-width: 450px;
     
     .modal-content {
       padding: 1rem;

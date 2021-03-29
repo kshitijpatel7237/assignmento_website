@@ -7,6 +7,8 @@ var multer = require("multer")
 var mongoose=require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.Promise = require('q').Promise;
+var nodemailer = require('nodemailer');
+var cookieParser = require('cookie-parser');
 
 //var router=require('router')
 var dbconn=require('./routs/dbconn');
@@ -27,7 +29,7 @@ var upload = multer({dest : '/tmp/uploads'})
 
 
 // setting middlewares
-
+app.use(cookieParser());
 
 // app.use(express.static(path.join(__dirname, '/assets'))) 
 
@@ -36,9 +38,14 @@ var upload = multer({dest : '/tmp/uploads'})
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.get('/',function(req,res)
 {
-
-  
-	res.render('index',{status:0,name:"",message:""});
+console.log(req.cookies);
+  var name=req.cookies.assignmento;
+  console.log(name);
+  //var status=req.cookies.status;
+  if(name!="")
+	res.render('index',{status:1,name:name,message:""});
+else
+  res.render('index',{status:0,name:"",message:""});
 });
 
 app.get('/contribute',function(req,res)
@@ -150,8 +157,14 @@ MongoClient.connect(url,  function(err, db) {
    
 if(result.length!=0)
 {
+  res.cookie('assignmento',result[0].name,{
+    expire: new Date(400035500 + Date.now()),
+httpOnly:true
+  });
+  //console.log(req.cookie);
 res.render('index',{status:1,name:result[0].name,message:"login Success"});
     db.close();
+
 }
 else
 {
@@ -162,12 +175,45 @@ else
 
   });
 });
+
+
  
 //console.log(req.body);
 //res.send("sign_up_sucessfully");
 
 
 });
+
+app.post('/send_mail',function(req,res)
+  {
+    console.log(req.body);
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'kshitij7237046763@gmail.com',
+    pass: 'Kshitij@123'
+  }
+});
+
+var mailOptions = {
+  from: 'kshitij7237046763@gmail.com',
+  to: 'kshitijpatel917050@gmail.com',
+  subject: 'email from assignmento user',
+  text:req.body.name+" :"+req.body.msg
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+ res.render('index',{status:0,name:"",message:"Email Sent"});
+  });
 
 app.listen(app.get('port'),function(){
 	console.log("app is running ");

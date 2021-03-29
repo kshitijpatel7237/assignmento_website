@@ -178,12 +178,13 @@ else
   });
 });
 
+});
 
- 
-//console.log(req.body);
-//res.send("sign_up_sucessfully");
-
-
+app.get('/logout', (req, res)=>{
+//it will clear the userData cookie
+res.clearCookie('assignmento');
+//res.send('user logout successfully');
+res.render('index',{status:1,name:"",message:""});
 });
 
 app.post('/send_mail',function(req,res)

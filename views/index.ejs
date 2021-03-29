@@ -125,16 +125,22 @@
   </button>  -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     <%  if(name=="") { %>
-  Please Login
+  Please Login  
    <% }else {
    %>
-   Welcome  <%= name %>
+  Welcome  <%= name %>
+  
+  
+   
  <%} %>
   </button>
 
-
  
       </div>
+      <br>
+       <%  if(name!="") { %>
+<a class="btn btn-danger" href="/logout">Logout</a>
+<%} %>
     </div>
   </section> <!-- End Hero Section -->
 

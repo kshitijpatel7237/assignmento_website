@@ -52,7 +52,7 @@ console.log(req.cookies);
 
 app.get('/contribute',function(req,res)
 {
-res.render('contribute',{message:""});
+res.render('contribute',{name:req.cookies.assignmento,degree:req.cookies.degree,mobile:req.cookies.mobile,address:req.cookies.address,email:req.cookies.email,message:""});
 });
 
 app.get('/assignments',function(req,res)
@@ -131,6 +131,26 @@ var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
  fun(req,res);
  
 //console.log(req.body);
+res.cookie('assignmento',req.body.name,{
+     maxAge:6912000000,
+httpOnly:true
+  });
+res.cookie('degree',req.body.degree,{
+     maxAge:6912000000,
+httpOnly:true
+  });
+res.cookie('email',req.body.email,{
+     maxAge:6912000000,
+httpOnly:true
+  });
+res.cookie('mobile',req.body.mobile,{
+     maxAge:6912000000,
+httpOnly:true
+  });
+res.cookie('address',req.body.address,{
+     maxAge:6912000000,
+httpOnly:true
+  });
 
 res.render('index',{status:1,name:req.body.name,message:'Sign Up sucessfull'});
 
@@ -163,6 +183,7 @@ if(result.length!=0)
      maxAge:6912000000,
 httpOnly:true
   });
+
   //console.log(req.cookie);
 res.render('index',{status:1,name:result[0].name,message:"login Success"});
     db.close();
@@ -215,7 +236,7 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 });
 
- res.render('index',{status:0,name:"",message:"Email Sent"});
+ res.render('index',{status:0,name:req.cookies.assignmento,message:"Email Sent "});
   });
 
 app.listen(app.get('port'),function(){

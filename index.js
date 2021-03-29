@@ -40,6 +40,7 @@ app.get('/',function(req,res)
 {
 console.log(req.cookies);
     var name="";
+   if(req.cookies.assignmento)
    name=req.cookies.assignmento;
   console.log(name);
   //var status=req.cookies.status;

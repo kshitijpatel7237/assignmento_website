@@ -39,13 +39,14 @@ app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.get('/',function(req,res)
 {
 console.log(req.cookies);
-  var name=req.cookies.assignmento;
+    var name="";
+   name=req.cookies.assignmento;
   console.log(name);
   //var status=req.cookies.status;
-  if(name!="")
+  //if(name!="")
 	res.render('index',{status:1,name:name,message:""});
-else
-  res.render('index',{status:0,name:"",message:""});
+//else
+ // res.render('index',{status:0,name:"",message:""});
 });
 
 app.get('/contribute',function(req,res)

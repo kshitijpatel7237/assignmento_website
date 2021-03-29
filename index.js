@@ -160,7 +160,7 @@ MongoClient.connect(url,  function(err, db) {
 if(result.length!=0)
 {
   res.cookie('assignmento',result[0].name,{
-    expire: new Date(400035500 + Date.now()),
+     maxAge:6912000000,
 httpOnly:true
   });
   //console.log(req.cookie);

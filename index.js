@@ -52,7 +52,7 @@ console.log(req.cookies);
 
 app.get('/contribute',function(req,res)
 {
-res.render('contribute',{name:req.cookies.assignmento,degree:req.cookies.degree,mobile:req.cookies.mobile,address:req.cookies.address,email:req.cookies.email,message:""});
+res.render('contribute',{message:""});
 });
 
 app.get('/assignments',function(req,res)

@@ -36,12 +36,52 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- =======================================================
-  * Template Name: E-Assignmento - v2.2.1
-  * Template URL: https://bootstrapmade.com/E-Assignmento-bootstrap-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style type="text/css">
+    
+    .profile_link{
+padding: 2px;border-radius:50%;float: right;position: relative;top:-45px;right:30px
+    }
+    .logout_nav{
+      display: none;
+    }
+    @media screen and (max-width:600px)
+    {
+      .profile_link{
+        right:70px;
+      }
+      .logout_nav{
+        display: block;
+      }
+    }
+     .notification{
+border-radius:50%;float: right;position: relative;top:-40px;right:35px
+    }
+    .prof-1{
+    
+      display: none;
+    }
+
+    @media screen and (max-width:600px)
+    {
+      .notification{
+        right:70px;
+      }
+      .profile_link{
+        display: none;
+      }
+      .prof-1{
+        display: block;
+        margin-left:22px;
+      }
+      .prof-1::after{
+        content:'  <%= name %>'
+  
+  
+   
+ 
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -61,8 +101,9 @@
       </div>
 
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html">Home</a></li>
+        <ul class="nav-menu" style="margin-right:100px">
+         <!--  <li  class="prof-1"><a href="index.html"></a></li> -->
+         <li class="prof-1"><a><img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" width="35px" height="35px" style="border-radius:50px;background-color: grey;z-index: 9" /></a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#screenshots">Gallery</a></li>
@@ -77,10 +118,43 @@
             </ul>
           </li>
           <li><a href="#blog">New Posts</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="logout_nav text-center" style="padding: 2px;background-color: grey"><a href="/logout">
+
+<%  if(name==""){ %>
+         Please Login
+
+         <% } else{ %>
+         Logout
+<% } %>
+
+        </a></li>
+         <!--  <li><a href="#contact">Contact</a></li> -->
+
         </ul>
       </nav><!-- #nav-menu-container -->
+
     </div>
+     <!-- <li class="profile_link"><img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" width="35px" height="35px" style="border-radius:50px;background-color: grey;z-index: 9" /></a></li> -->
+     <li class="profile_link">
+      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">
+    <%  if(name=="") { %>
+  Please Login  
+   <% }else {
+   %>
+  <%= name %>
+  
+  
+   
+ <%} %>
+  </button>
+
+ 
+     
+       <!-- <%  if(name!="") { %>
+<a class="btn btn-danger" href="/logout">Logout</a>
+<%} %> </li> -->
+    <li class="notification"><img src="https://img.icons8.com/android/24/000000/appointment-reminders.png"/></li>
+   
   </header><!-- End Header -->
 
 
@@ -119,11 +193,11 @@
         <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
       </div> -->
 
-      <div style="width:300px"  class="d-flex flex-row justify-content-around" >
+      <!-- <div style="width:300px"  class="d-flex flex-row justify-content-around" > -->
          <!-- <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
     Login
   </button>  -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     <%  if(name=="") { %>
   Please Login  
    <% }else {
@@ -141,7 +215,7 @@
        <%  if(name!="") { %>
 <a class="btn btn-danger" href="/logout">Logout</a>
 <%} %>
-    </div>
+    </div> -->
   </section> <!-- End Hero Section -->
 
   
@@ -885,7 +959,34 @@
 
 <!-- login html starts -->
 
-  <!-- The Modal -->
+<!-- if alredy logged in model starts -->
+<!-- The Modal -->
+<% if(name!="")
+{ %>
+
+  <div class="modal fade mymodel" id="myModal" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-transform: none;">Not Recommended To Logout</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+
+<div class="modal-body "><a class="btn btn-danger text-center" href="/logout">Logout</a></div>
+
+
+
+      
+      </div>
+    </div>
+  </div>
+<!-- logged in model  ends -->
+<% } else { %>
+  <!-- The Modal if not logged in -->
   <div class="modal fade mymodel" id="myModal" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -932,7 +1033,7 @@
     </div>
   </div>
 
-
+<% } %>
 <!-- login ends -->
 
 

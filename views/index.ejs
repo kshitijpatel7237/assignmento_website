@@ -74,8 +74,8 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
         margin-left:22px;
       }
       .prof-1::after{
-        content:'  <%= name %>'
-  
+        content:'  <%= name %>';
+        color:white;
   
    
  
@@ -136,7 +136,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
           <li class="logout_nav text-center" style="padding: 2px;background-color: grey">
 
 <%  if(name==""){ %>
-         <p data-toggle="modal" data-target="#myModal">Please Login </p>
+         <p data-toggle="modal" data-target="#myModal" style="color: white ;font-weight:700">Please Login </p>
 
          <% } else{ %>
          <a href="/logout ">Logout</a>

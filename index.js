@@ -9,7 +9,7 @@ mongoose.Promise = require('bluebird');
 mongoose.Promise = require('q').Promise;
 var nodemailer = require('nodemailer');
 var cookieParser = require('cookie-parser');
-
+var jwt=require('jsonwebtoken');
 //var router=require('router')
 var dbconn=require('./routs/dbconn');
 
@@ -22,6 +22,18 @@ app.set('port',process.env.PORT || 3000);
 
 app.set('view engine', 'ejs');
 
+
+//code for local storage 
+
+
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require('node-localstorage').LocalStorage;
+  localStorage = new LocalStorage('./scratch');
+}
+
+
+
+
 // setting body-parser and multer
 app.use(bodyparser.urlencoded({extended:true})); 
 app.use(bodyparser.json()) ;
@@ -30,6 +42,18 @@ var upload = multer({dest : '/tmp/uploads'})
 
 // setting middlewares
 app.use(cookieParser());
+
+
+function check_login(req,res,next)
+{
+  var token=localStorage.getItem('my_token');
+  try {
+  jwt.verify(token, 'login_token');
+} catch(err) {
+ res.render('index',{status:1,name:"",message:"please login first"});
+}
+next();
+}
 
 // app.use(express.static(path.join(__dirname, '/assets'))) 
 
@@ -50,7 +74,7 @@ console.log(req.cookies);
  // res.render('index',{status:0,name:"",message:""});
 });
 
-app.get('/contribute',function(req,res)
+app.get('/contribute',check_login,function(req,res)
 {
 res.render('contribute',{message:""});
 });
@@ -99,7 +123,7 @@ res.render('contribute',{message: "assignment uploaded sucseesfully"});
 
 
 });
-app.post('/find_pdfs',function(req,res)
+app.post('/find_pdfs',check_login,function(req,res)
   {
     var key=req.body.search_key;
     console.log(key);
@@ -158,8 +182,10 @@ res.render('index',{status:1,name:req.body.name,message:'Sign Up sucessfull'});
 
 app.post('/user_login',function(req,res)
 {
-  
+  //generating token
 
+  var token = jwt.sign({email: req.body.email,password:req.body.password}, 'login_token');
+  localStorage.setItem('my_token', token);
   // var key=req.body.search_key;
     console.log(req.body);
     var MongoClient = require('mongodb').MongoClient;
@@ -203,6 +229,7 @@ else
 
 app.get('/logout', (req, res)=>{
 //it will clear the userData cookie
+localStorage.removeItem('my_token');
 res.clearCookie('assignmento');
 //res.send('user logout successfully');
 res.render('index',{status:1,name:"",message:""});

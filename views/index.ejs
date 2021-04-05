@@ -81,7 +81,22 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
  
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </style>
+  
 </head>
 
 <body>
@@ -118,16 +133,16 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
             </ul>
           </li>
           <li><a href="#blog">New Posts</a></li>
-          <li class="logout_nav text-center" style="padding: 2px;background-color: grey"><a href="/logout">
+          <li class="logout_nav text-center" style="padding: 2px;background-color: grey">
 
 <%  if(name==""){ %>
-         Please Login
+         <p data-toggle="modal" data-target="#myModal">Please Login </p>
 
          <% } else{ %>
-         Logout
+         <a href="/logout ">Logout</a>
 <% } %>
 
-        </a></li>
+        </li>
          <!--  <li><a href="#contact">Contact</a></li> -->
 
         </ul>
@@ -153,8 +168,8 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
        <!-- <%  if(name!="") { %>
 <a class="btn btn-danger" href="/logout">Logout</a>
 <%} %> </li> -->
-    <li class="notification"><img src="https://img.icons8.com/android/24/000000/appointment-reminders.png"/></li>
-   
+    <li class="notification bell-icon" style="cursor:pointer;" ><img src="https://img.icons8.com/android/24/000000/appointment-reminders.png"/> <span style="color:#e91e63;font-size:25px;font-weight:800;margin-left:-18px">1</span></li>
+     
   </header><!-- End Header -->
 
 

@@ -35,6 +35,10 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
+
+
+
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css">
     
@@ -263,9 +267,9 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
 
 
 <!-- The form -->
-<form class="example text-center" action="/find_pdfs" method="POST">
+<form class="example text-center" action="/find_pdfs" method="POST" id="pdf_search" enctype="application/json">
   <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;">
-     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px;border-radius:4px;">
+     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px;border-radius:4px;" id="link">
   <button type="submit" style="font-size:19px"><i class="fa fa-search"></i></button>
   </div>
  
@@ -306,6 +310,49 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
 </div>
 
 <br><br>
+
+
+<!-- show pdfs using ajax  starts-->
+
+<div class="container" id="my_table" style="margin-top:10px">
+    <table class="table table-hover table-bordered assignment-table">
+    <thead id="ass-head">
+      <tr style="text-align:center;">
+       
+        <th style="text-align:center;">Topic</th>
+        <th style="text-align:center;">Uploaded By</th>
+        <th style="text-align:center;">Status</th>
+         <th>Link</th>
+      </tr>
+    </thead>
+
+  
+    <tbody id="tbody">
+
+
+
+ 
+    </tbody>
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" id="ajax_pre_loading">;
+  </table>
+</div>
+
+<!-- show pdfs using ajax  ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      <!--  <div class="container">
         <div class="row">
 
@@ -1069,9 +1116,81 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<!-- script for ajax -->
+<script>
+  
+  
+</script>
 
+<script>
+  $( document ).ready(function() {
+   $('#ajax_pre_loading').hide();
+   $('#ass-head').hide();
+  // SUBMIT FORM
 
+    $("#pdf_search").submit(function(event) {
+    // Prevent the form from submitting via the browser.
+    $('#ass-head').show();
+    event.preventDefault();
+    ajaxPost();
+  });
+    
+    
+    function ajaxPost(){
+      
+      // PREPARE FORM DATA
+      var formData = {
+        link : $("#link").val()
+       
+      }
+      
+      // DO POST
+      $.ajax({
+  method: 'POST',
+  contentType : "application/json",
+  url:'/find_pdfs',
+  data :JSON.stringify(formData),
+  dataType : 'json',
+  beforeSend: function() { $('#ajax_pre_loading').show(); },
+  success: function(res) {
+            $('#ajax_pre_loading').hide();
+            $('#my_table').hide();
 
+    var assignments = res.data;
+    var body = [];
+if(assignments.length>0)
+{
+assignments.forEach(function(assignment) {
+      var tr = $('<tr/>');
+      tr.append($('<td/>').html(assignment.name));
+      tr.append($('<td/>').html( assignment.name ));
+       tr.append($('<td/>').html( assignment.name));
+         tr.append($('<td/>').html('<a href="blah-blah">' + assignment.name + '</a>'));
+    
+      body.push(tr);
+    });
+ $('table.assignment-table').find('tbody').html(body);
+}
+ else
+ {
+   $('table.assignment-table').find('tbody').html("no record found");
+ }   
+
+   
+  }
+})
+      
+      // Reset FormData after Posting
+      resetData();
+ 
+    }
+    
+    function resetData(){
+      $("#link").val("");
+      
+    }
+})
+</script>
 </body>
 
 </html>

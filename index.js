@@ -10,6 +10,7 @@ mongoose.Promise = require('q').Promise;
 var nodemailer = require('nodemailer');
 var cookieParser = require('cookie-parser');
 var jwt=require('jsonwebtoken');
+var httpmsgs=require('http-msgs');
 //var router=require('router')
 var dbconn=require('./routs/dbconn');
 
@@ -51,6 +52,7 @@ function check_login(req,res,next)
   jwt.verify(token, 'login_token');
 } catch(err) {
  res.render('index',{status:1,name:"",message:"please login first"});
+console.log(err);
 }
 next();
 }
@@ -139,7 +141,11 @@ MongoClient.connect(url,  function(err, db) {
     console.log(result);
    
 
-    res.render('assignments',{data:result});
+   // res.render('assignments',{data:result});
+  // res.send(result);
+  httpmsgs.sendJSON(req,res,{
+    data:result
+  });
     db.close();
 
   });

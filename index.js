@@ -127,7 +127,8 @@ res.render('contribute',{message: "assignment uploaded sucseesfully"});
 });
 app.post('/find_pdfs',check_login,function(req,res)
   {
-    var key=req.body.search_key;
+    var key=req.body.link;
+    //search_key
     console.log(key);
     var MongoClient = require('mongodb').MongoClient;
 var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -138,7 +139,7 @@ MongoClient.connect(url,  function(err, db) {
    var query = {link_of_playlist:key};
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;
-    console.log(result);
+   // console.log(result);
    
 
    // res.render('assignments',{data:result});

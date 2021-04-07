@@ -56,7 +56,7 @@
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
       </div>
 
-      <nav id="nav-menu-container">
+      <nav id="">
         <ul class="nav-menu">
           <li class="menu-active"><a href="/">Home</a></li>
           <!-- <li><a href="#about-us">About</a></li> -->
@@ -64,163 +64,66 @@
           <!-- <li><a href="#screenshots">Gallery</a></li> -->
          <!--  <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li> -->
-          <li class="menu-has-children"><a href="">Special Links</a>
+          <!-- <li class="menu-has-children"><a href="">Special Links</a>
             <ul>
-              <li><a href="#">Find Your College Metarial</a></li>
+              <li><a href="#">Find Your College Metarial</a></li> -->
              <!--  <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
               <li><a href="#">Drop Down 5</a></li> -->
-            </ul>
-          </li>
-          <li><a href="#blog">New Posts</a></li>
+          <!--   </ul>
+          </li> -->
+          <!-- <li><a href="#blog">New Posts</a></li> -->
         <!--   <li><a href="/#contact">Contact</a></li> -->
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- End Header -->
   <!-- FORM SECTION START -->
-  <h2 class="text-center">Upload New Assignment</h2>
-  <br>
-
-
- <!-- code for alert starts -->
-<% if(message!="") {
-  %>
-  <div class="alert alert-success alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-     <strong></strong><%= message %>
-  </div>
-
-<%}%>
-
-<!-- code for elert ends -->
-
-
-  <br>
-<form class="form-horizontal"  method="POST" action="submit_assignment" enctype="multipart/form-data">
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="control-label col-sm-4">Your Name<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="name" value="" required>
-      </div>
-    </div>
-
-
-     <div class="form-group">
-      <label class="control-label col-sm-4">Your Highest Digree</label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="degree" value="">
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="control-label col-sm-4">Your Email ID<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="email"value="" required>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="control-label col-sm-4">Your Mobile</label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="mobile" value="">
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-12">
-    <div class="form-group">
-      <label class="control-label col-sm-2">Your Address</label>
-      <div class="col-sm-10">
-        <textarea type="text" class="form-control" rows="2" name="address" value=""></textarea>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Subject <span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" placeholder="ie. English Math etc" name="subject" required>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Chapter Name<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class=" form-control" placeholder="as given in book" name="chapter" required>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Topic Name<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="topic" required>
-      </div>
-    </div>
-  </div>
   
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">No Of Questions<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="number_of_ques" required>
-      </div>
+<br><br><br><br><br><br><br>
+ <div style="max-width:500px;margin:auto;border:2px solid black"  >
+    <div >
+      
+      
+        <!-- Modal Header -->
+        
+        
+        <!-- Modal body -->
+        <div>
+         <form method="POST" class="form-vertical" action="/user_login">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10" >
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
   </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Yutube Channel Name<span style="color:red">*</span></label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="channel" required>
-      </div>
+<br><br>
+  <div class="form-group" style="margin-top: 6px">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
     </div>
   </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Link Of playlist<span style="color:red">*</span></label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="link_of_playlist" required>
-      </div>
+  <br><br>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-success">Login</button>
     </div>
-  </div>
-   <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Drive link<span style="color:red">*</span></label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="drive_link" required>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Upload Assignment</label>
-    <div style="margin:auto;">
- <input type="file" name="file">
-</div>
-    </div>
-  </div> -->
-
-
- 
-  <div   style="margin: auto;">
-
-   <input type="submit" value="submit" class="btn btn-primary">
-  </div>
   </div>
 </form>
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          New User? 
+          <a type="button" class="btn btn-success" href="/sign-up">Sign-Up</a>
+        </div>
+        
+      </div>
+   
+  </div>
+
   <!-- FORM SECTION ENDS -->
 
 

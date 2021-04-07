@@ -51,8 +51,10 @@ function check_login(req,res,next)
   try {
   jwt.verify(token, 'login_token');
 } catch(err) {
- res.render('index',{status:1,name:"",message:"please login first"});
+ //res.render('index',{status:1,name:"",message:"please login first"});
 console.log(err);
+res.redirect('/login_page');
+
 }
 next();
 }
@@ -62,7 +64,7 @@ next();
 // setting routs
 
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
-app.get('/',function(req,res)
+app.get('/',check_login,function(req,res)
 {
 console.log(req.cookies);
     var name="";
@@ -89,6 +91,11 @@ res.render('assignments');
 app.get('/sign-up',function(req,res)
   {
     res.render('sign-up.ejs');
+  });
+
+app.get('/login_page',function(req,res)
+  {
+    res.render('login_page');
   });
 
 
@@ -125,7 +132,7 @@ res.render('contribute',{message: "assignment uploaded sucseesfully"});
 
 
 });
-app.post('/find_pdfs',check_login,function(req,res)
+app.post('/find_pdfs',function(req,res)
   {
     var key=req.body.link;
     //search_key
@@ -139,7 +146,7 @@ MongoClient.connect(url,  function(err, db) {
    var query = {link_of_playlist:key};
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;
-   // console.log(result);
+   console.log(result);
    
 
    // res.render('assignments',{data:result});
@@ -156,7 +163,8 @@ MongoClient.connect(url,  function(err, db) {
 app.post('/new_user_sign_up',function(req,res)
 {
   
-
+var token = jwt.sign({email: req.body.email,password:req.body.password}, 'login_token');
+  localStorage.setItem('my_token', token);
   console.log("signup "+req.body);
 var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
  fun(req,res);
@@ -272,6 +280,27 @@ transporter.sendMail(mailOptions, function(error, info){
 
  res.render('index',{status:0,name:req.cookies.assignmento,message:"Email Sent "});
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(app.get('port'),function(){
 	console.log("app is running ");

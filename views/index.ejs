@@ -114,7 +114,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="index.html"><span>E-</span>Assignmento</a></h1>
+        <h1><a href="/"><span>E-</span>Assignmento</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -172,7 +172,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
        <!-- <%  if(name!="") { %>
 <a class="btn btn-danger" href="/logout">Logout</a>
 <%} %> </li> -->
-    <li class="notification bell-icon" style="cursor:pointer;" ><img src="https://img.icons8.com/android/24/000000/appointment-reminders.png"/> <span style="color:#e91e63;font-size:25px;font-weight:800;margin-left:-18px">1</span></li>
+   <!--  <li class="notification bell-icon" style="cursor:pointer;" ><img src="https://img.icons8.com/android/24/000000/appointment-reminders.png"/> <span style="color:#e91e63;font-size:25px;font-weight:800;margin-left:-18px">1</span></li> -->
      
   </header><!-- End Header -->
 
@@ -238,7 +238,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
   </section> <!-- End Hero Section -->
 
   
-
+<div id="all_notifications"></div>
 
 
 
@@ -318,11 +318,11 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
     <table class="table table-hover table-bordered assignment-table">
     <thead id="ass-head">
       <tr style="text-align:center;">
-       
+        <th style="text-align:center;">Chapter</th>
         <th style="text-align:center;">Topic</th>
         <th style="text-align:center;">Uploaded By</th>
-        <th style="text-align:center;">Status</th>
-         <th>Link</th>
+       
+         <th style="text-align:center;">Link</th>
       </tr>
     </thead>
 
@@ -679,98 +679,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
 
         </div>
       </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <!-- <section id="pricing" class="padd-section text-cente">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-
-          <h2>Meet With Price</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="table">
-                <h4>basic</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="table">
-                <h4>PERSONAL</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="table">
-                <h4>BUSINESS</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="table">
-                <h4>profeesional</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> --><!-- End Pricing Section -->
+    </section>
 
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="padd-sectio">
@@ -1117,10 +1026,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
   <script src="assets/js/main.js"></script>
 
 <!-- script for ajax -->
-<script>
-  
-  
-</script>
+<!-- <script src="assets/js/show_notifications.js"></script> -->
 
 <script>
   $( document ).ready(function() {
@@ -1162,10 +1068,10 @@ if(assignments.length>0)
 {
 assignments.forEach(function(assignment) {
       var tr = $('<tr/>');
-      tr.append($('<td/>').html(assignment.name));
-      tr.append($('<td/>').html( assignment.name ));
+      tr.append($('<td/>').html(assignment.chapter));
+      tr.append($('<td/>').html( assignment.topic ));
        tr.append($('<td/>').html( assignment.name));
-         tr.append($('<td/>').html('<a href="blah-blah">' + assignment.name + '</a>'));
+         tr.append($('<td/>').html('<a href="'+assignment.drive_link+'">Link</a>'));
     
       body.push(tr);
     });

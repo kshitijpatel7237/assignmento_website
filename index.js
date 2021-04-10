@@ -71,7 +71,7 @@ function check_login(req,res,next)
   jwt.verify(token, 'login_token');
 } catch(err) {
  //res.render('index',{status:1,name:"",message:"please login first"});
-console.log(err);
+//console.log(err);
 origin=req.path;
 if(req.path=='/find_all_pdfs')
 req.session.parameter=req.query.link;

@@ -73,7 +73,7 @@ function check_login(req,res,next)
  //res.render('index',{status:1,name:"",message:"please login first"});
 console.log(err);
 origin=req.path;
-if(typeof req.query!=undefined)
+if(req.path=='/find_all_pdfs')
 req.session.parameter=req.query.link;
 
 res.redirect('/login_page');
@@ -117,6 +117,9 @@ res.render('contribute',{message:""});
 app.get('/assignments',function(req,res)
 {
 res.render('assignments');
+req.session.destroy(function(error){
+        console.log("Session Destroyed")
+    })
 });
 
 app.get('/sign-up',function(req,res)
@@ -217,9 +220,7 @@ MongoClient.connect(url,  function(err, db) {
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;
    
-req.session.destroy(function(error){
-        console.log("Session Destroyed")
-    })
+
     res.render('assignments',{data:result});
   // res.send(result);
   

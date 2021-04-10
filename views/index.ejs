@@ -91,6 +91,44 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
 
 
 
+/*load more css*/
+
+.stage {
+padding:40px;
+text-align:center;}
+.stage>a {
+  line-height:1em;
+  letter-spacing:0.06em;
+  font-family: 'Lato', sans-serif;
+  font-weight:normal;
+  font-size:16px;
+  text-decoration:none;
+  color:#fff;
+  background:#231f20;
+  display:inline-block;
+  padding:15px 12px 15px 15px;
+  transition:background 200ms;
+  border-radius:4px;
+}
+.stage>a:hover {
+  background:#cea052;
+}
+.stage>a:after {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight:300;
+  content: "\f105";
+  margin-left:20px;
+  color:#cea052;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
+
+a:hover:after {
+  color:#231f20;
+}
+
+
 
 
 
@@ -337,6 +375,11 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
   </table>
 </div>
 
+
+<div class="stage"  id="load_more">
+<a href="#" id="load_more_link">Load All </a>
+</div>
+   
 <!-- show pdfs using ajax  ends -->
 
 
@@ -1032,6 +1075,7 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
   $( document ).ready(function() {
    $('#ajax_pre_loading').hide();
    $('#ass-head').hide();
+    $('#load_more').hide();
   // SUBMIT FORM
 
     $("#pdf_search").submit(function(event) {
@@ -1061,11 +1105,12 @@ border-radius:50%;float: right;position: relative;top:-40px;right:35px
   success: function(res) {
             $('#ajax_pre_loading').hide();
             $('#my_table').hide();
-
+          
     var assignments = res.data;
     var body = [];
 if(assignments.length>0)
 {
+  
 assignments.forEach(function(assignment) {
       var tr = $('<tr/>');
       tr.append($('<td/>').html(assignment.chapter));
@@ -1076,6 +1121,10 @@ assignments.forEach(function(assignment) {
       body.push(tr);
     });
  $('table.assignment-table').find('tbody').html(body);
+  $('#load_more_link').attr('href','/find_all_pdfs?link='+formData.link);
+   $('#load_more').show();
+
+ 
 }
  else
  {

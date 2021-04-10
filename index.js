@@ -13,6 +13,7 @@ var jwt=require('jsonwebtoken');
 var httpmsgs=require('http-msgs');
 //var router=require('router')
 var dbconn=require('./routs/dbconn');
+var url=require('url');
 
 // setting environment
 
@@ -43,7 +44,7 @@ var upload = multer({dest : '/tmp/uploads'})
 
 // setting middlewares
 app.use(cookieParser());
-
+var origin='/';
 
 function check_login(req,res,next)
 {
@@ -53,6 +54,8 @@ function check_login(req,res,next)
 } catch(err) {
  //res.render('index',{status:1,name:"",message:"please login first"});
 console.log(err);
+origin=req.path;
+console.log(req.path);
 res.redirect('/login_page');
 
 }
@@ -144,7 +147,7 @@ MongoClient.connect(url,  function(err, db) {
   if (err) throw err;
   var dbo = db.db("myFirstDatabase");
    var query = {link_of_playlist:key};
-   dbo.collection("contributes").find(query).toArray(function(err, result) {
+   dbo.collection("contributes").find(query).limit(2).toArray(function(err, result) {
     if (err) throw err;
    console.log(result);
    
@@ -159,6 +162,43 @@ MongoClient.connect(url,  function(err, db) {
   });
 });
   });
+
+
+
+
+app.get('/find_all_pdfs',check_login,function(req,res)
+  {
+    var key=req.query.link;
+    //search_key
+    console.log(key);
+    var MongoClient = require('mongodb').MongoClient;
+var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+//"mongodb://localhost:27017/" || 
+MongoClient.connect(url,  function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("myFirstDatabase");
+   var query = {link_of_playlist:key};
+   dbo.collection("contributes").find(query).toArray(function(err, result) {
+    if (err) throw err;
+   console.log(result);
+   
+
+    res.render('assignments',{data:result});
+  // res.send(result);
+  
+    
+
+  });
+});
+  });
+
+
+
+
+
+
+
+
 
 app.post('/new_user_sign_up',function(req,res)
 {
@@ -191,8 +231,10 @@ res.cookie('address',req.body.address,{
 httpOnly:true
   });
 
-res.render('index',{status:1,name:req.body.name,message:'Sign Up sucessfull'});
-
+//res.render('index',{status:1,name:req.body.name,message:'Sign Up sucessfull'});
+var tmp=origin;
+res.redirect(tmp);
+  
 });
 
 app.post('/user_login',function(req,res)
@@ -226,8 +268,13 @@ httpOnly:true
   });
 
   //console.log(req.cookie);
-res.render('index',{status:1,name:result[0].name,message:"login Success"});
+  var tmp=origin;
+  origin="/";
+
+//res.render(tmp,{status:1,name:result[0].name,message:"login Success"});
+res.redirect(tmp)
     db.close();
+
 
 }
 else

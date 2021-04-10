@@ -69,6 +69,7 @@ function check_login(req,res,next)
   var token=localStorage.getItem('my_token');
   try {
   jwt.verify(token, 'login_token');
+  next();
 } catch(err) {
  //res.render('index',{status:1,name:"",message:"please login first"});
 //console.log(err);
@@ -78,8 +79,10 @@ req.session.parameter=req.query.link;
 
 res.redirect('/login_page');
 
+
+
 }
-next();
+
 }
 
 // app.use(express.static(path.join(__dirname, '/assets'))) 
@@ -97,11 +100,11 @@ next();
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.get('/',check_login,function(req,res)
 {
-console.log(req.cookies);
+//console.log(req.cookies);
     var name="";
    if(req.cookies.assignmento)
    name=req.cookies.assignmento;
-  console.log(name);
+  //console.log(name);
   //var status=req.cookies.status;
   //if(name!="")
 	res.render('index',{status:1,name:name,message:""});
@@ -116,10 +119,11 @@ res.render('contribute',{message:""});
 
 app.get('/assignments',function(req,res)
 {
-res.render('assignments');
-req.session.destroy(function(error){
+  req.session.destroy(function(error){
         console.log("Session Destroyed")
-    })
+    });
+res.render('assignments');
+
 });
 
 app.get('/sign-up',function(req,res)
@@ -130,6 +134,7 @@ app.get('/sign-up',function(req,res)
 app.get('/login_page',function(req,res)
   {
     res.render('login_page');
+    
   });
 
 
@@ -156,11 +161,11 @@ app.post('/submit_assignment',submit_assignment.single("file"),function(req,res)
 {
   
 
-  console.log(req.file);
+ // console.log(req.file);
 var fun=require(path.join(__dirname, '/routs/controllers/contribute_controller'));
  fun(req,res);
  
-console.log(req.body);
+//console.log(req.body);
 
 res.render('contribute',{message: "assignment uploaded sucseesfully"});
 
@@ -170,7 +175,7 @@ app.post('/find_pdfs',function(req,res)
   {
     var key=req.body.link;
     //search_key
-    console.log(key);
+   // console.log(key);
     var MongoClient = require('mongodb').MongoClient;
 var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 //"mongodb://localhost:27017/" || 
@@ -207,9 +212,9 @@ app.get('/find_all_pdfs',check_login,function(req,res)
       key=req.session.parameter;
     else
       key=req.query.link;
-    console.log("s"+req.session.parameter)
+   // console.log("s"+req.session.parameter)
     //search_key
-    console.log(key);
+   // console.log(key);
     var MongoClient = require('mongodb').MongoClient;
 var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 //"mongodb://localhost:27017/" || 
@@ -243,7 +248,7 @@ app.post('/new_user_sign_up',function(req,res)
   
 var token = jwt.sign({email: req.body.email,password:req.body.password}, 'login_token');
   localStorage.setItem('my_token', token);
-  console.log("signup "+req.body);
+  //console.log("signup "+req.body);
 var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
  fun(req,res);
  
@@ -282,7 +287,7 @@ app.post('/user_login',function(req,res)
   var token = jwt.sign({email: req.body.email,password:req.body.password}, 'login_token');
   localStorage.setItem('my_token', token);
   // var key=req.body.search_key;
-    console.log(req.body);
+  //  console.log(req.body);
     var MongoClient = require('mongodb').MongoClient;
 var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 //"mongodb://localhost:27017/" || 
@@ -291,8 +296,8 @@ MongoClient.connect(url,  function(err, db) {
   var dbo = db.db("myFirstDatabase");
   var email=req.body.email;
   var password=req.body.password;
-  console.log(email);
-  console.log(password);
+ // console.log(email);
+ // console.log(password);
    var query = {email:email,password:password};
    dbo.collection("sign_ups").find(query).toArray(function(err, result) {
     if (err) throw err;
@@ -311,7 +316,7 @@ httpOnly:true
 
 //res.render(tmp,{status:1,name:result[0].name,message:"login Success"});
 res.redirect(tmp)
-    db.close();
+    //db.close();
 
 
 }
@@ -329,8 +334,13 @@ else
 
 app.get('/logout', (req, res)=>{
 //it will clear the userData cookie
+req.session.destroy(function(error){
+        console.log("Session Destroyed")
+    });
+
 localStorage.removeItem('my_token');
 res.clearCookie('assignmento');
+
 //res.send('user logout successfully');
 res.render('index',{status:1,name:"",message:""});
 });

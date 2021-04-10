@@ -199,9 +199,11 @@ app.get('/find_all_pdfs',check_login,function(req,res)
     var key="";
     
    
-     key=req.query.link;
+     
      if(req.session.parameter)
       key=req.session.parameter;
+    else
+      key=req.query.link;
     console.log("s"+req.session.parameter)
     //search_key
     console.log(key);

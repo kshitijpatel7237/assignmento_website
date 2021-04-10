@@ -1,6 +1,6 @@
-var express=require('express')
+var express=require('express');
 var app=express();
-var path=require('path')
+var path=require('path');
 var fs = require('fs');
 var bodyparser=require('body-parser')
 var multer = require("multer")
@@ -14,6 +14,7 @@ var httpmsgs=require('http-msgs');
 //var router=require('router')
 var dbconn=require('./routs/dbconn');
 var url=require('url');
+var session=require('express-session');
 
 // setting environment
 
@@ -45,7 +46,24 @@ var upload = multer({dest : '/tmp/uploads'})
 // setting middlewares
 app.use(cookieParser());
 var origin='/';
-var parameter='';
+
+
+app.use(session({
+  
+    // It holds the secret key for session
+    secret: 'Your_Secret_Key',
+  
+    // Forces the session to be saved
+    // back to the session store
+    resave: true,
+  
+    // Forces a session that is "uninitialized"
+    // to be saved to the store
+    saveUninitialized: true
+}))
+
+
+
 function check_login(req,res,next)
 {
   var token=localStorage.getItem('my_token');
@@ -55,9 +73,9 @@ function check_login(req,res,next)
  //res.render('index',{status:1,name:"",message:"please login first"});
 console.log(err);
 origin=req.path;
+if(typeof req.query!=undefined)
+req.session.parameter=req.query.link;
 
-parameter=req.query.link;
-console.log(req.path+" parameter "+parameter);
 res.redirect('/login_page');
 
 }
@@ -67,6 +85,14 @@ next();
 // app.use(express.static(path.join(__dirname, '/assets'))) 
 
 // setting routs
+
+
+
+
+
+
+
+
 
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.get('/',check_login,function(req,res)
@@ -171,15 +197,12 @@ MongoClient.connect(url,  function(err, db) {
 app.get('/find_all_pdfs',check_login,function(req,res)
   {
     var key="";
-    if(parameter!="")
-    {
-      key=parameter;
-    }
-    else
-    {
-
+    
+   
      key=req.query.link;
-    }
+     if(req.session.parameter)
+      key=req.session.parameter;
+    console.log("s"+req.session.parameter)
     //search_key
     console.log(key);
     var MongoClient = require('mongodb').MongoClient;
@@ -191,9 +214,10 @@ MongoClient.connect(url,  function(err, db) {
    var query = {link_of_playlist:key};
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;
-   console.log("parameter "+parameter);
-   parameter="";
-
+   
+req.session.destroy(function(error){
+        console.log("Session Destroyed")
+    })
     res.render('assignments',{data:result});
   // res.send(result);
   

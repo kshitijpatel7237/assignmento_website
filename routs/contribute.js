@@ -19,6 +19,7 @@
 var multer=require('multer');
 var fs=require('fs');
 var path=require('path');
+var contribute=require('./../controllers/')
    
 module.exports = function(req,res){ 
   console.log("inside contribue"); 

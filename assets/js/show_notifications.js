@@ -48,7 +48,7 @@ notifications.forEach(function(notification) {
 }
  else
  {
-   $('table.assignment-table').find('tbody').html("no record found");
+   $('#all_notifications').html("no notification");
  }   
 
    
@@ -56,12 +56,8 @@ notifications.forEach(function(notification) {
 })
       
       // Reset FormData after Posting
-      resetData();
+    
  
     }
     
-    function resetData(){
-      $("#link").val("");
-      
-    }
 })

@@ -45,7 +45,7 @@ var upload = multer({dest : '/tmp/uploads'})
 // setting middlewares
 app.use(cookieParser());
 var origin='/';
-
+var parameter='';
 function check_login(req,res,next)
 {
   var token=localStorage.getItem('my_token');
@@ -55,7 +55,9 @@ function check_login(req,res,next)
  //res.render('index',{status:1,name:"",message:"please login first"});
 console.log(err);
 origin=req.path;
-console.log(req.path);
+
+parameter=req.query.link;
+console.log(req.path+" parameter "+parameter);
 res.redirect('/login_page');
 
 }
@@ -149,7 +151,7 @@ MongoClient.connect(url,  function(err, db) {
    var query = {link_of_playlist:key};
    dbo.collection("contributes").find(query).limit(2).toArray(function(err, result) {
     if (err) throw err;
-   console.log(result);
+   //console.log(result);
    
 
    // res.render('assignments',{data:result});
@@ -168,7 +170,16 @@ MongoClient.connect(url,  function(err, db) {
 
 app.get('/find_all_pdfs',check_login,function(req,res)
   {
-    var key=req.query.link;
+    var key="";
+    if(parameter!="")
+    {
+      key=parameter;
+    }
+    else
+    {
+
+     key=req.query.link;
+    }
     //search_key
     console.log(key);
     var MongoClient = require('mongodb').MongoClient;
@@ -180,8 +191,8 @@ MongoClient.connect(url,  function(err, db) {
    var query = {link_of_playlist:key};
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;
-   console.log(result);
-   
+   console.log("parameter "+parameter);
+   parameter="";
 
     res.render('assignments',{data:result});
   // res.send(result);
@@ -258,7 +269,7 @@ MongoClient.connect(url,  function(err, db) {
    var query = {email:email,password:password};
    dbo.collection("sign_ups").find(query).toArray(function(err, result) {
     if (err) throw err;
-    console.log(result);
+   // console.log(result);
    
 if(result.length!=0)
 {

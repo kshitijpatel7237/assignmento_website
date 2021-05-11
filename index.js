@@ -114,7 +114,10 @@ app.get('/',check_login,function(req,res)
 
 app.get('/contribute',check_login,function(req,res)
 {
-res.render('contribute',{message:""});
+   var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
+res.render('contribute',{name:name,message:""});
 });
 
 app.get('/assignments',function(req,res)
@@ -134,6 +137,15 @@ app.get('/sign-up',function(req,res)
 app.get('/login_page',function(req,res)
   {
     res.render('login_page');
+    
+  });
+
+app.get('/article_editor',function(req,res)
+  {
+    var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
+    res.render('article_editor',{name:name,message:""});
     
   });
 

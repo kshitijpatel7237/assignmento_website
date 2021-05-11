@@ -1512,3 +1512,54 @@ section {
 .signup-section {
   padding: 0.3rem 0rem;
 }
+
+
+
+
+/*some extra css*/
+
+ .profile_link{
+padding: 2px;border-radius:50%;float: right;position: relative;top:-45px;right:30px
+    }
+    .logout_nav{
+      display: none;
+    }
+    @media screen and (max-width:600px)
+    {
+      .profile_link{
+        right:70px;
+      }
+      .logout_nav{
+        display: block;
+      }
+    }
+     .notification{
+border-radius:50%;float: right;position: relative;top:-40px;right:35px
+    }
+    .prof-1{
+    
+      display: none;
+    }
+
+    @media screen and (max-width:600px)
+    {
+      .notification{
+        right:70px;
+      }
+      .profile_link{
+        display: none;
+      }
+      .prof-1{
+        display: block;
+        margin-left:22px;
+      }
+      .prof-1::after{
+        content:'  <%= name %>';
+        color:white;
+  
+   
+ 
+      }
+    }
+
+

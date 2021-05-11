@@ -77,7 +77,8 @@ number_of_ques:req.body.no_of_ques,
 channel_name:req.body.channel,
 link_of_playlist:req.body.link_of_playlist,
 
-drive_link:req.body.drive_link
+drive_link:req.body.drive_link,
+mark_down:req.body.mark_down
 },
 function(err,result)
 {

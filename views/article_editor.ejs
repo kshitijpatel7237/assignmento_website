@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+        <head>
+               <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Welcome to E-Assignmento</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    
+   
+
+
+
+/*load more css*/
+
+.stage {
+padding:40px;
+text-align:center;}
+.stage>a {
+  line-height:1em;
+  letter-spacing:0.06em;
+  font-family: 'Lato', sans-serif;
+  font-weight:normal;
+  font-size:16px;
+  text-decoration:none;
+  color:#fff;
+  background:#71c55d;
+  display:inline-block;
+  padding:15px 12px 15px 15px;
+  transition:background 200ms;
+  border-radius:4px;
+}
+.stage>a:hover {
+  background:#cea052;
+}
+.stage>a:after {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight:300;
+  content: "\f105";
+  margin-left:20px;
+  color:#fff;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
+
+a:hover:after {
+  color:#fff;
+}
+  </style>
+
+ <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+        </head>
+
+        <body>
+                <%- include('header')-%> 
+                <textarea name="editor1" style="display: block;"></textarea>
+                <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script>
+              
+        </body>
+</html>

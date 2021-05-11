@@ -171,7 +171,9 @@ var submit_assignment = multer({
 
 app.post('/submit_assignment',submit_assignment.single("file"),function(req,res)
 {
-  
+  var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
 
  // console.log(req.file);
 var fun=require(path.join(__dirname, '/routs/controllers/contribute_controller'));
@@ -179,7 +181,7 @@ var fun=require(path.join(__dirname, '/routs/controllers/contribute_controller')
  
 //console.log(req.body);
 
-res.render('contribute',{message: "assignment uploaded sucseesfully"});
+res.render('contribute',{message: "assignment uploaded sucseesfully",name:name});
 
 
 });

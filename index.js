@@ -239,7 +239,7 @@ MongoClient.connect(url,  function(err, db) {
    dbo.collection("contributes").find(query).toArray(function(err, result) {
     if (err) throw err;
    
-
+//console.log(result);
     res.render('assignments',{data:result});
   // res.send(result);
   
@@ -392,6 +392,37 @@ transporter.sendMail(mailOptions, function(error, info){
 
 
 
+
+app.post('/post_comments',function(req,res)
+  {
+    var key=req.body.link_of_playlist;
+    //search_key
+   // console.log(key);
+    var MongoClient = require('mongodb').MongoClient;
+var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+//"mongodb://localhost:27017/" || 
+
+var fun=require(path.join(__dirname, '/routs/controllers/comment_controller'));
+ fun(req,res);
+MongoClient.connect(url,  function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("myFirstDatabase");
+   var query = {link_of_playlist:key};
+   dbo.collection("comments").find(query).limit(50).toArray(function(err, result) {
+    if (err) throw err;
+   //console.log(result);
+   
+
+   // res.render('assignments',{data:result});
+   //res.send(result);
+  httpmsgs.sendJSON(req,res,{
+    data:result
+  });
+    db.close();
+
+  });
+});
+  });
 
 
 

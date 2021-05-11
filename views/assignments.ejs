@@ -42,9 +42,15 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style >
+  	#comment_table tr td{
+  		background-color:#fff;
+
+  	}
+  </style>
 </head>
 
-  </head>
+ 
   <body>
 
   	<div class="container-fluid" >
@@ -136,80 +142,127 @@
 
 
 <br><br><br>
-  <!-- <footer style="background-color: indigo;color:white;"> -->
-      <!--Site footer -->
-    <!-- <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p  style="color: white;">We know that ,we waste a lot of time in searching right study material on yutube ,,after watching full playlist 
-              still unable to solve questions why??
-              that is because of lack of practice !
-              here is the solution for that
-            </p>
-          </div>
-
-         
-
-          <div class="col-xs-6 col-md-3">
-            <h6 >Quick Links</h6>
-            <ul class="footer-links" >
-              <li ><a href="http://scanfcode.com/about/>About Us</a></li>
-              <li style="color: white;><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li style="color: white;"><a href="/contribute">Contribute</a></li>
-              <li style="color: white;"><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-             
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-         <a href="#">assignmento</a>.
-            </p>
-          </div>
-
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-            </ul>
-          </div>
-        </div>
-      </div>
-</footer> 
-  -->
- 
+  
 </div>
 <div>
 	<div style="margin:auto;max-width:400px;margin-bottom:200px">
 		
 		<h3>Add a comment here</h3>
-  <form>
-      <div class="form-group">
-        <textarea class="form-control status-box" rows="3" placeholder="Enter your comment here..."></textarea>
+  <form id="post_comments" method="POST" action="/post_comments">
+      <div class="form-group" >
+        <textarea class="form-control status-box" rows="3" placeholder="Enter your comment here..." id="comments"></textarea>
       </div>
-    </form>
-    <div class="button-group" style="text-align: center;">
+       <div class="button-group" style="text-align: center;" id="load_comments">
       <!-- <p class="counter">250</p> -->
-      <a href="#" class="btn btn-primary">Post</a>
+      <button class="btn btn-primary" type="submit">Post</a>
     </div>
-    
+    </form>
+   
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" id="ajax_pre_loading" style="margin: auto;">
   </div>
 
 	</div>
   
+<div id="comment_list" style="text-align: center;margin: auto;">
 
+	 
+<table id="comment_table" style="margin: auto;border-spacing:60px" class="table table-hover  text-center">
+	
+	 <tbody style="margin: auto;">
+	 	
+	 </tbody>
+</table>
+</div>
 
+	 
 
 <script>
- // require('./contribute');
+ 
+  $( document ).ready(function() {
+   $('#ajax_pre_loading').hide();
+   //$('#ass-head').hide();
+   // $('#load_more').hide();
+  // SUBMIT FORM
+
+    $("#post_comments").submit(function(event) {
+    // Prevent the form from submitting via the browser.
+   // $('#ass-head').show();
+    event.preventDefault();
+    ajaxPost();
+  });
+    
+    
+    function ajaxPost(){
+      let urlString=window.location.href;
+      console.log(urlString);
+      let paramString = urlString.split('?')[1];
+let queryString = new URLSearchParams(paramString);
+  var link="";
+for (let pair of queryString.entries()) {
+    console.log("Key is: " + pair[0]);
+    console.log("Value is: " + pair[1]);
+    link=pair[1];
+}
+      var formData = {
+        comments: $("#comments").val(),
+        link_of_playlist:link
+       
+      }
+      
+      // DO POST
+      $.ajax({
+  method: 'POST',
+  contentType : "application/json",
+  url:'/post_comments',
+  data :JSON.stringify(formData),
+  dataType : 'json',
+  beforeSend: function() { $('#ajax_pre_loading').show(); },
+  success: function(res) {
+            $('#ajax_pre_loading').hide();
+            //$('#my_table').hide();
+          
+    var all_comments = res.data;
+    console.log(res);
+    var body = [];
+if(all_comments.length>0)
+{
+  
+all_comments.forEach(function(all_comments) {
+      var tr = $('<tr/>');
+      tr.append($('<td/>').html(all_comments.name));
+      tr.append($('<td/>').html( all_comments.comments ));
+     //  tr.append($('<td/>').html( assignment.name));
+     //    tr.append($('<td/>').html('<a href="'+assignment.drive_link+'">Link</a>'));
+    
+      body.push(tr);
+    });
+//$('table.assignment-table').find('tbody')
+$('#comment_table').find('tbody').html(body);
+  //$('#load_more_link').attr('href','/find_all_pdfs?link='+formData.link);
+ //  $('#load_more').show();
+
+ 
+}
+ else
+ {
+   $('#comment_list').html("no comment yet");
+ }   
+
+   
+  }
+})
+      
+      // Reset FormData after Posting
+      resetData();
+ 
+    }
+    
+    function resetData(){
+    //  $("#link").val("");
+      
+    }
+})
+</script>
 </script>
 <script >
   var $select1 = $( '#select1' ),

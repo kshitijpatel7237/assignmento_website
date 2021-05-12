@@ -43,10 +43,38 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style >
-  	#comment_table tr td{
+  	#comment_table tbody tr td{
   		background-color:#fff;
+  		padding: 12px;
+
 
   	}
+  		#comment_table tbody tr td:first-child{
+  		background-color:#edf1ee;
+  		margin-left:-15px;
+  		text-align: left;
+  		max-width: 60px;
+  		min-width: 30px;
+
+
+
+
+  	}
+  	#comment_table tbody tr td:first-child::before{
+  		content: ''
+  		
+
+
+  	}
+  	 .prof-1::after{
+        content:'  <%= name %>';
+        color:white;
+  
+   
+ 
+      }
+
+  		
   </style>
 </head>
 
@@ -57,34 +85,9 @@
 
 
  <!-- ======= Header ======= -->
-  <header id="header" class="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="index.html"><span>E-</span>Assignmento</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="/">Home</a></li>
-        
-          <li class="menu-has-children"><a href="">Special Links</a>
-            <ul>
-              <li><a href="#">Find Your College Metarial</a></li>
-             <!--  <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li> -->
-            </ul>
-          </li>
-          <li><a href="#blog">New Posts</a></li>
-        <!--   <li><a href="#contact">Contact</a></li> -->
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- End Header -->
-
+  <%- include('./header.ejs') -%>
+  <!-- FORM SECTION START -->
+  <br><br> 
 
 <br><br>
 
@@ -145,7 +148,7 @@
   
 </div>
 <div>
-	<div style="margin:auto;max-width:400px;margin-bottom:200px">
+	<div style="margin:auto;max-width:400px;margin-bottom:80px">
 		
 		<h3>Add a comment here</h3>
   <form id="post_comments" method="POST" action="/post_comments">
@@ -162,14 +165,36 @@
   </div>
 
 	</div>
+	<h2 style="text-align: left;margin-left:34px;">Comments:-</h2>
   
-<div id="comment_list" style="text-align: center;margin: auto;">
+<div id="comment_list" style="text-align: center;margin: auto;width:80vw">
 
 	 
 <table id="comment_table" style="margin: auto;border-spacing:60px" class="table table-hover  text-center">
 	
-	 <tbody style="margin: auto;">
+	 <tbody style="margin: auto;padding:25px;">
 	 	
+	 	<% if (comments.length >0){ 
+        comments.forEach(function(row) { %>
+          <tr>
+            <td><h5><%= name %>:</h5><p style="font-style:italic"><%= row.time %></p></td>
+            <td><div style="display: flex;flex-direction: column;justify-content: space-around;">
+            	 </div><div><%= row.comments %></div>
+            	<!-- <div style="display: flex;flex-direction: row;justify-content: center;margin:40px">
+            		<div>Like</div> <div>comment</div>
+            	</div> -->
+           
+            	
+
+
+            </td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">No comments yet</td>
+                
+              </tr>
+            <% } %>
 	 </tbody>
 </table>
 </div>
@@ -223,19 +248,25 @@ for (let pair of queryString.entries()) {
           
     var all_comments = res.data;
     console.log(res);
-    var body = [];
+    var arr = [];
 if(all_comments.length>0)
 {
   
 all_comments.forEach(function(all_comments) {
       var tr = $('<tr/>');
-      tr.append($('<td/>').html(all_comments.name));
+      tr.append($('<td/>').html('<h5><%= name %></h5> '+all_comments.time));//all_comments.name
       tr.append($('<td/>').html( all_comments.comments ));
-     //  tr.append($('<td/>').html( assignment.name));
+   //   tr.append($('<td/>').html('reply <br> like'));
      //    tr.append($('<td/>').html('<a href="'+assignment.drive_link+'">Link</a>'));
     
-      body.push(tr);
+      arr.push(tr);
     });
+var body=[];
+for(var i=arr.length;i>=0;i--)
+{
+body.push(arr[i]);
+}
+//Object.keys(body).reverse();
 //$('table.assignment-table').find('tbody')
 $('#comment_table').find('tbody').html(body);
   //$('#load_more_link').attr('href','/find_all_pdfs?link='+formData.link);
@@ -277,98 +308,6 @@ $select1.on( 'change', function() {
 
 
 <!-- ======= Footer ======= -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-12 col-lg-4">
-          <div class="footer-logo">
-
-            <a class="navbar-brand" href="#">E-Assignmento</a>
-            <p>Hopefully ,it will come with a new edge in education industry.</p>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Quick Links</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="/contribute">Contribute</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <!-- <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Support</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">faq</a></li>
-              <li><a href="#">Editor help</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div> -->
-
-      </div>
-    </div>
-
-    <div class="copyrights">
-      <div class="container">
-        <p>&copy; Copyrights E-Assignmento. All rights reserved.</p>
-        <div class="credits">
-          <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=E-Assignmento
-        -->
-         <!--  Designed by <a href="https://bootstrapmade.com/">E-</a> -->
-        </div>
-      </div>
-    </div>
-
-  </footer><!-- End  Footer -->
-
+ <%- include('footer')-%>
   </body>
   </html>

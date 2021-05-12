@@ -15,6 +15,10 @@ var comment_schema=mongoose.Schema(
 	},
 	comments:{
 		type:String
+	},
+	time:{
+		type:String,
+		default:(new Date()).toDateString()
 	}
 	
 

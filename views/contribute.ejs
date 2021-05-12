@@ -36,15 +36,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- =======================================================
-  * Template Name: E-Assignmento - v2.2.1
-  * Template URL: https://bootstrapmade.com/E-Assignmento-bootstrap-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style type="text/css">
+     .prof-1::after{
+        content:'  <%= name %>';
+        color:white;
+  
+   
+ 
+      }
+
+  </style>
 </head>
 
-</head>
+
 <body>
   <!-- ======= Header ======= -->
   <!-- <header id="header" class="header">
@@ -230,10 +234,10 @@
   <!-- FORM SECTION ENDS -->
 
 
-
+<%- include('footer')-%>
 
  <!-- End  Footer -->
-  <%- include('footer')-%>
+  
 
   </body>
   </html>

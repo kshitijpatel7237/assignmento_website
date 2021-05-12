@@ -69,6 +69,7 @@ comment_model.create({
 link_of_playlist:req.body.link_of_playlist,
 comments:req.body.comments
 
+
 },
 function(err,result)
 {

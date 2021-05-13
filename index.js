@@ -15,6 +15,7 @@ var httpmsgs=require('http-msgs');
 var dbconn=require('./routs/dbconn');
 var url=require('url');
 var session=require('express-session');
+var sign_up_model=require('./routs/models/sign_up');
 
 // setting environment
 
@@ -414,6 +415,8 @@ app.post('/post_comments',function(req,res)
     var key=req.body.link_of_playlist;
     //search_key
    // console.log(key);
+
+
     var MongoClient = require('mongodb').MongoClient;
 var url ="mongodb+srv://user:ApKp@7237046763@cluster0.71j4n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 //"mongodb://localhost:27017/" || 
@@ -458,14 +461,45 @@ app.use(passport.session());
 
 app.get('/success',function(req,res)
 {
-  console.log(userProfile.id+" "+userProfile.displayName);
+  console.log(userProfile);
+  console.log(userProfile.id+" "+userProfile.displayName+" "+userProfile.emails[0].value);
   var token = jwt.sign({email: userProfile.id,password:userProfile.displayName}, 'login_token');
   localStorage.setItem('my_token', token);
   //console.log("signup "+req.body);
-var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
- fun(req,res);
+// var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
+//  fun(req,res);
+//conole.log('ya');
+
  
 //console.log(req.body);
+sign_up_model.create({
+name:userProfile.displayName,
+degree:'logged in with gmail',
+email:userProfile.emails[0].value,
+mobile:'logged in with gmail',
+address:'na',
+password:userProfile.id
+},
+function(err,result)
+{
+  if(err)
+  {
+    console.log("insertion failed" + err);
+    //res.send("data insertion failed status 500");
+        
+        return;
+  }
+  else
+  {
+    console.log("insertion successfull");
+ return;
+  }
+}
+);
+
+
+
+
 
 res.cookie('assignmento',userProfile.displayName,{
      maxAge:6912000000,
@@ -499,10 +533,16 @@ passport.deserializeUser(function(obj, cb) {
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const GOOGLE_CLIENT_ID = '415088139205-d2iq1ihj5irrbitvae96f4k9aoi1qbv6.apps.googleusercontent.com';
 const GOOGLE_CLIENT_SECRET ="uGiR9Kw_QuzJjiSKYIM5I7Je";
+// const GOOGLE_CLIENT_ID = '270555561170-cj221t5vp9i1k49avt1luba9gf2f3793.apps.googleusercontent.com';
+// const GOOGLE_CLIENT_SECRET ="DvQbZA0wtIEzya4Jv1xYwGBv";
 passport.use(new GoogleStrategy({
     clientID:'415088139205-d2iq1ihj5irrbitvae96f4k9aoi1qbv6.apps.googleusercontent.com',
     clientSecret:'uGiR9Kw_QuzJjiSKYIM5I7Je',
-    callbackURL: "https://assignmento.herokuapp.com/auth/google/callback"
+  //    clientID:'270555561170-cj221t5vp9i1k49avt1luba9gf2f3793.apps.googleusercontent.com',
+  // clientSecret:'DvQbZA0wtIEzya4Jv1xYwGBv',
+
+  //callbackURL:"http://localhost:3000/auth/google/callback"
+   callbackURL: "https://assignmento.herokuapp.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
       userProfile=profile;
@@ -511,7 +551,7 @@ passport.use(new GoogleStrategy({
 ));
  
 app.get('/auth/google', 
-  passport.authenticate('google', { scope : ['profile', 'email'] }));
+  passport.authenticate('google',{ scope:['profile', 'email'] }));
  
 app.get('/auth/google/callback', 
   passport.authenticate('google', { failureRedirect: '/error' }),
@@ -520,7 +560,7 @@ app.get('/auth/google/callback',
     res.redirect('/success');
   });
 
-
+// callbackURL: "https://assignmento.herokuapp.com/auth/google/callback"
 
 
 

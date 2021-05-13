@@ -177,7 +177,7 @@
 	 	<% if (comments.length >0){ 
         comments.forEach(function(row) { %>
           <tr>
-            <td><h5><%= name %>:</h5><p style="font-style:italic"><%= row.time %></p></td>
+            <td><h5><%= row.user_name %>:</h5><p style="font-style:italic"><%= row.time %></p></td>
             <td><div style="display: flex;flex-direction: column;justify-content: space-around;">
             	 </div><div><%= row.comments %></div>
             	<!-- <div style="display: flex;flex-direction: row;justify-content: center;margin:40px">
@@ -254,7 +254,7 @@ if(all_comments.length>0)
   
 all_comments.forEach(function(all_comments) {
       var tr = $('<tr/>');
-      tr.append($('<td/>').html('<h5><%= name %></h5> '+all_comments.time));//all_comments.name
+      tr.append($('<td/>').html('<h5>'+all_comments.user_name+'</h5>'+all_comments.time));//all_comments.name
       tr.append($('<td/>').html( all_comments.comments ));
    //   tr.append($('<td/>').html('reply <br> like'));
      //    tr.append($('<td/>').html('<a href="'+assignment.drive_link+'">Link</a>'));

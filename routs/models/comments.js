@@ -19,6 +19,10 @@ var comment_schema=mongoose.Schema(
 	time:{
 		type:String,
 		default:(new Date()).toDateString()
+	},
+	user_name:{
+		type:String,
+		default:'you'
 	}
 	
 

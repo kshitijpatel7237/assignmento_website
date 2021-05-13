@@ -60,14 +60,19 @@ var multer=require('multer');
 var fs=require('fs');
 var {check,validationResult}=require('express-validator')
 var comment_model=require('../models/comments');
+
 //pdf:req.file.originalname,
 module.exports=function(req,res)
 {
+	 var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
 	console.log(req.body);
 comment_model.create({
 
 link_of_playlist:req.body.link_of_playlist,
-comments:req.body.comments
+comments:req.body.comments,
+user_name:name
 
 
 },

@@ -502,7 +502,7 @@ const GOOGLE_CLIENT_SECRET ="uGiR9Kw_QuzJjiSKYIM5I7Je";
 passport.use(new GoogleStrategy({
     clientID:'415088139205-d2iq1ihj5irrbitvae96f4k9aoi1qbv6.apps.googleusercontent.com',
     clientSecret:'uGiR9Kw_QuzJjiSKYIM5I7Je',
-    callbackURL: "http://localhost:3000/auth/google/callback"
+    callbackURL: "https://assignmento.herokuapp.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
       userProfile=profile;

@@ -215,6 +215,7 @@ MongoClient.connect(url,  function(err, db) {
 
 
 
+  
 
 app.get('/find_all_pdfs',check_login,function(req,res)
   {
@@ -453,17 +454,23 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //app.set('view engine', 'ejs');
+//app.get('/success', (req, res) => res.send(userProfile));
 
 app.get('/success',function(req,res)
 {
-  
-var token = jwt.sign({email: req.body.email,password:req.body.password}, 'login_token');
+  console.log(userProfile.id+" "+userProfile.displayName);
+  var token = jwt.sign({email: userProfile.id,password:userProfile.displayName}, 'login_token');
   localStorage.setItem('my_token', token);
   //console.log("signup "+req.body);
 var fun=require(path.join(__dirname, '/routs/controllers/sign_up_controller'));
  fun(req,res);
  
-console.log(req.body);
+//console.log(req.body);
+
+res.cookie('assignmento',userProfile.displayName,{
+     maxAge:6912000000,
+httpOnly:true
+  });
 
 //res.render('index',{status:1,name:req.body.name,message:'Sign Up sucessfull'});
 var tmp=origin;
@@ -490,11 +497,11 @@ passport.deserializeUser(function(obj, cb) {
 /*  Google AUTH  */
  
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const GOOGLE_CLIENT_ID = 'our-google-client-id';
-const GOOGLE_CLIENT_SECRET = 'our-google-client-secret';
+const GOOGLE_CLIENT_ID = '415088139205-d2iq1ihj5irrbitvae96f4k9aoi1qbv6.apps.googleusercontent.com';
+const GOOGLE_CLIENT_SECRET ="uGiR9Kw_QuzJjiSKYIM5I7Je";
 passport.use(new GoogleStrategy({
-    clientID: GOOGLE_CLIENT_ID,
-    clientSecret: GOOGLE_CLIENT_SECRET,
+    clientID:'415088139205-d2iq1ihj5irrbitvae96f4k9aoi1qbv6.apps.googleusercontent.com',
+    clientSecret:'uGiR9Kw_QuzJjiSKYIM5I7Je',
     callbackURL: "http://localhost:3000/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {

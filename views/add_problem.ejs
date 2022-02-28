@@ -90,7 +90,7 @@
   <%- include('./header.ejs') -%>
   <!-- FORM SECTION START -->
   <br><br> <br><br>
-  <h2 class="text-center" style="z-index: 999999;margin-top: 50px">Upload New Assignment</h2>
+  <h2 class="text-center" style="z-index: 999999;margin-top: 50px">Add New Problem</h2>
   <br>
 
 
@@ -108,134 +108,68 @@
 
 
   <br>
-<form class="form-horizontal"  method="POST" action="submit_assignment" enctype="multipart/form-data">
+<form class="form-horizontal"  method="POST" action="add_new_problem" enctype="multipart/form-data">
   <div class="col-sm-6">
     <div class="form-group">
-      <label class="control-label col-sm-4">Your Name<span style="color:red">*</span></label>
+      <label class="control-label col-sm-4">problem_id<span style="color:red">*</span></label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" name="name" value="" required>
+        <input type="text" class="form-control" name="problem_id" value="" required>
       </div>
     </div>
 
 
      <div class="form-group">
-      <label class="control-label col-sm-4">Your Highest Digree</label>
+      <label class="control-label col-sm-4">contest_id</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" name="degree" value="">
+        <input type="text" class="form-control" name="contest_id" value="">
       </div>
     </div>
   </div>
 
   <div class="col-sm-6">
     <div class="form-group">
-      <label class="control-label col-sm-4">Your Email ID<span style="color:red">*</span></label>
+      <label class="control-label col-sm-4">problem name<span style="color:red">*</span></label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" name="email"value="" required>
+        <input type="text" class="form-control" name=" problem_name"value="" required>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label col-sm-4">Your Mobile</label>
+      <label class="control-label col-sm-4">problem_text</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" name="mobile" value="">
+        <input type="text" class="form-control" name="problem_text" value="">
       </div>
     </div>
   </div>
 
   <div class="col-sm-12">
     <div class="form-group">
-      <label class="control-label col-sm-2">Your Address</label>
+      <label class="control-label col-sm-2">setter name</label>
       <div class="col-sm-10">
-        <textarea type="text" class="form-control" rows="2" name="address" value=""></textarea>
+        <textarea type="text" class="form-control" rows="2" name="problem_setter_name" value=""></textarea>
       </div>
     </div>
   </div>
 
 
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Subject <span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" placeholder="ie. English Math etc" name="subject" required>
-      </div>
-    </div>
-  </div>
 
   <div class="col-sm-6">
     <div class="form-group">
-      <label class="col-sm-4 control-label">Chapter Name<span style="color:red">*</span></label>
+      <label class="col-sm-4 control-label">topic tag<span style="color:red">*</span></label>
       <div class="col-sm-8">
-        <input type="text" class=" form-control" placeholder="as given in book" name="chapter" required>
+        <input type="text" class=" form-control" name="topic_tag" required>
       </div>
     </div>
   </div>
 
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Topic Name<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="topic" required>
-      </div>
-    </div>
-  </div>
   
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">No Of Questions<span style="color:red">*</span></label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" name="number_of_ques" required>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Yutube Channel Name<span style="color:red">*</span></label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="channel" required>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Link Of playlist<span style="color:red">*</span></label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="link_of_playlist" required>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Drive link<span style="color:red">*</span></label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" name="drive_link" required>
-      </div>
-    </div>
-  </div>
-
-<div class="col-sm-6">
-    <div class="form-group">
-      <label class="control-label col-sm-2">mark-down</label>
-      <div class="col-sm-10">
-        <textarea type="text" class="form-control" rows="2" name="mark_down" value=""></textarea>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="col-sm-6">
-    <div class="form-group">
-      <label class="col-sm-4 control-label">Upload Assignment</label>
-    <div style="margin:auto;">
- <input type="file" name="file">
-</div>
-    </div>
-  </div> -->
-
+  
+  
 
  
   
-  </div>
+  
+
   <div   style="margin: auto;text-align: center;margin-bottom:40px">
 
    <input type="submit" value="submit" class="btn btn-primary">

@@ -168,8 +168,28 @@ var submit_assignment = multer({
     storage: storage, 
     
 });
+var add_new_problem = multer({  
+    storage: storage, 
+    
+});
+
+app.post('/add_new_problem',add_new_problem.single("file"),function(req,res)
+{
+  console.log(req.body);
+  var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
+
+ // console.log(req.file);
+var fun=require(path.join(__dirname, '/routs/controllers/setting_problem_controller'));
+ fun(req,res);
+ 
+console.log(req.body);
+
+res.render('add_problem',{message: "problem added sucseesfully",name:name});
 
 
+});
 app.post('/submit_assignment',submit_assignment.single("file"),function(req,res)
 {
   var name="";
@@ -561,6 +581,27 @@ app.get('/auth/google/callback',
   });
 
 // callbackURL: "https://assignmento.herokuapp.com/auth/google/callback"
+
+
+
+app.get('/problem_page',function(req,res)
+  {
+    var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
+    res.render('problem_page',{name:name,message:""});
+    
+  });
+
+app.get('/add_problem',function(req,res)
+  {
+    var name="";
+   if(req.cookies.assignmento)
+   name=req.cookies.assignmento;
+    res.render('add_problem',{name:name,message:""});
+    
+  });
+
 
 
 

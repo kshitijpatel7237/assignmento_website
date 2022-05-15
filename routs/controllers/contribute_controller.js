@@ -1,58 +1,4 @@
-// var mongoose=require('mongoose');
-// const Contribute_schema=mongoose.Schema({
-// 	name:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	degree:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	email:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	mobile:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	address:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	subject:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	chapter:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	topic:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	number_of_ques:{
-// 		type:Number,
-// 		required:true
-// 	}
-// 	channel_name:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	link_of_playlist:{
-// 		type:String,
-// 		required:true
-// 	}
-// 	pdf:{
-// 		type:String,
-// 		required:true
-// 	}
 
-// });
-// //model
-// mongoose.model('Assignmento',Contribute_schema);
-// module.exports=mongoose.model('Assignmento');
 var express=require('express')
 var app=express();
 var path=require('path')
@@ -60,10 +6,8 @@ var multer=require('multer');
 var fs=require('fs');
 var {check,validationResult}=require('express-validator')
 var contribute_model=require('../models/contribute');
-//pdf:req.file.originalname,
 module.exports=function(req,res)
 {
-	//console.log(req.body);
 contribute_model.create({
 name:req.body.name,
 degree:req.body.degree,

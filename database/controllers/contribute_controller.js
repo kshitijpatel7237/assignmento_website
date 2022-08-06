@@ -65,7 +65,7 @@ module.exports = {
 				console.log(error);
 			}
 			else {
-				res.send("Data inserted");
+				console.log("Data inserted");
 			}
 		});
 	},

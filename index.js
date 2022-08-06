@@ -246,7 +246,7 @@ app.post('/find_pdfs', function (req, res) {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db("myFirstDatabase");
-    var query = { link_of_playlist: key };
+    var query = { link_of_playlist: key ,isApproved:"YES"};
     dbo.collection("contributes").find(query).limit(2).toArray(function (err, result) {
       if (err) throw err;
 
@@ -289,7 +289,7 @@ app.get('/find_all_pdfs', check_login, function (req, res) {
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db("myFirstDatabase");
-    var query = { link_of_playlist: key };
+    var query = { link_of_playlist: key,isApproved:"YES"};
     var comments;
     dbo.collection("comments").find(query).toArray(function (err, result) {
       if (err) throw err;

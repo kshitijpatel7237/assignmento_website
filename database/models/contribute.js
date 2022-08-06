@@ -59,15 +59,16 @@ var contribute_schema=mongoose.Schema(
 	},
 	mark_down:{
 		type:String
+	},
+	isApproved:{
+		type:String,
+		default:"NA"
 	}
 	
 
 	});
 
-//model pdf:{
-		//type:String,
-		//required:true
-	//},
+
 mongoose.model('contribute',contribute_schema);
 
 module.exports=mongoose.model('contribute');

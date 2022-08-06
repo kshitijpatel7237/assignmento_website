@@ -1,0 +1,154 @@
+<html>
+<head>
+
+	
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+	<title>Welcome to E-Assignmento</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  
+	<!-- Favicons -->
+	<link href="img/favicon.png" rel="icon">
+	<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+  
+	<!-- Vendor CSS Files -->
+	<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+	<link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  
+	<!-- Template Main CSS File -->
+	<link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	   .prof-1::after{
+		  content:'  <%= name %>';
+		  color:white;
+	
+	 
+   
+		}
+		.google {
+	  background-color:red;
+	  color: #fff;
+	  font-size: 18px;
+	  padding-top: 5px;
+	  border-radius: 50%;
+	  width: 35px;
+	  height: 35px;
+	  cursor: pointer;
+	  position: relative;
+	  bottom: -15px;
+  }
+  
+	
+		.div1>div{
+			background-color:#ffffff;
+			padding:20px;
+			text-align:center;
+			font-size:20px;
+			box-shadow:10px 20px 10px grey;
+		}
+		a{
+			text-decoration:none;
+			/* margin:20px; */
+			text-align:center;
+		}
+			a:hover
+			{
+			color:red;
+			text-decoration:none;
+		}
+        td,th{
+			background-color:#fff;
+			padding:10px;
+			
+			border-bottom:1px solid black;
+			border-collapse:collapse;
+			
+		}
+		
+	</style>
+	<title></title>
+</head>
+<body>
+</header> --><!-- End Header -->
+<%- include('./header.ejs') -%>
+<!-- FORM SECTION START -->
+<br><br> <br><br>
+<br><br>
+<div align="center">
+	<div ><h2 style="background-color:#b33d51;padding:30px; color:white;">Welcome To Admin Dashboard</h2></div>
+	<br><br>
+</div>
+<section style="display:flex;flex-direction:row;justify-content:space-around;">
+	<!-- first main div -->
+<div class="div1" style="display:flex;flex-direction:column;justify-content:space-around;background-color:black;padding:30px;"> 
+
+	<div><a href="#"> Dashboard</a></div>
+	<br>
+	<div> <a href="silentbuyers/studentlist.php"> Work Order </a></div>
+	 <br>
+	<div> <a href="#"> Work Report </a></div>
+	 <br>
+	 <div><a href="#"> Change Password </a></div>
+	 <br>
+	<div> <a href="adminlogin.php"> Logout </a></div>
+
+
+
+</div>
+<div>
+	<h3 style="text-align:center;">Admin Approval Requests</h3>
+	<table>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Id
+			</th>
+<th>
+				Address
+			</th>
+<th>
+	Status
+			</th>
+		</tr>
+		<% if (data.length >0){ 
+			data.forEach(function(row){ %>
+
+		
+		 	<tr>
+		 		<td><%= row.name %></td>
+		 		<td><%= row.email %></td>
+		 		<td><%= row.drive_link %></td>
+				
+		 		<td> <a href="/approve?document_id=<%= row._id %>" style="background-color:green;color:white;padding:3px;font-weight:900;cursor:pointer;outline:none;border-radius:5px;" name="approve">approve </a></td>
+
+		 	</tr>
+		 	
+		 	<% })} %>
+		
+	</table>
+
+</div>
+</section>
+<br><br>
+<%- include('footer')-%>
+</body>
+</html>
